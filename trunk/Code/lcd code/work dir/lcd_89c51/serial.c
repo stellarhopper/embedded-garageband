@@ -30,6 +30,7 @@ void print_welcome_msg(void)
 
 void serial_init(unsigned char my_baud)
 {
+
 	PCON |= 0x80;					/*SMOD1 = 1*/
 	SCON = 0x50;					  /* uart in mode 1 (8 bit), REN=1 */
    BDRCON &=0xEC;               /* BRR=0; SRC=0; */
