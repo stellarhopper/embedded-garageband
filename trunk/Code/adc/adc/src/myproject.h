@@ -12,6 +12,7 @@
 #include "serial.h"
 #include "delay.h"
 #include "midi.h"
+#include "instruments.h"
 //#include "adc.h"
 //#include "lcd.h"
 //#include "touchscreen.h"
