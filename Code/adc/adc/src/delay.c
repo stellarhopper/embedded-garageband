@@ -39,11 +39,10 @@ void delay_millisec(unsigned int delay)
         /* A subroutine for generating 1ms delay */
 
         TMOD |= 0x01; /* timer 0; mode 1 */
-        TH0 = 0xF4;
-        TL0 = 0x03; 
 
         for (  ; delay != 0; delay-- ) {
-
+				TH0 = 0xFC;
+        	    TL0 = 0x18;
                 TR0 = SET; /* start timer */
 
                 while(TF0 == CLEAR)
