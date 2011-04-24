@@ -11,6 +11,8 @@
 #include "timer.h"
 #include "serial.h"
 #include "delay.h"
+#include "graphics_lcd.h"
+
 /*All #defines start here*/
 
 #define TRUE 1			
