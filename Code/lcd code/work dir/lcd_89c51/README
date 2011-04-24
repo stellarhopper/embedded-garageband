@@ -1,0 +1,5 @@
+This owrks on 115200 Baudrate serial.
+In init_all function, initailize the serial port to 115200.
+Also the small delay function 
+
+The small delay function gives a delay on 11.0592Mhz crystal.
