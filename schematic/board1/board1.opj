@@ -25,7 +25,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 25 1075 25 372")
-        (Scroll "0 399")
+        (Scroll "37 65")
         (Zoom "128")
         (Occurrence "/"))
       (Path "C:\USERS\MAULIK\DESKTOP\ESD_PROJECT\SCHEMATIC\BOARD1\BOARD1.DSN")
