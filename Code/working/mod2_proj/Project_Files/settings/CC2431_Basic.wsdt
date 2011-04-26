@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>CC2431_Basic/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>143</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1491</ColumnWidth1><ColumnWidth2>397</ColumnWidth2><ColumnWidth3>99</ColumnWidth3></Build>
+    <TerminalIO/><Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1990</ColumnWidth1></Debug-Log><Find-in-Files><ColumnWidth0>709</ColumnWidth0><ColumnWidth1>101</ColumnWidth1><ColumnWidth2>1215</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-8085-30753</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>CC2431_Basic</ExpandedNode><ExpandedNode>CC2431_Basic/App_Layer</ExpandedNode><ExpandedNode>CC2431_Basic/Common</ExpandedNode><ExpandedNode>CC2431_Basic/Drivers</ExpandedNode><ExpandedNode>CC2431_Basic/Interface</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30586-32173</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-26689-24679</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-10953-10254</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\Main.c</Filename><XPos>0</XPos><YPos>71</YPos><SelStart>2034</SelStart><SelEnd>2034</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\uart.h</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>2897</SelStart><SelEnd>2897</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\key_map.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>94</SelStart><SelEnd>94</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\key_map.c</Filename><XPos>0</XPos><YPos>123</YPos><SelStart>3678</SelStart><SelEnd>3678</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\TouchScreen.c</Filename><XPos>0</XPos><YPos>66</YPos><SelStart>2739</SelStart><SelEnd>2739</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\App_RF.c</Filename><XPos>0</XPos><YPos>18</YPos><SelStart>233</SelStart><SelEnd>233</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\App_RF.h</Filename><XPos>0</XPos><YPos>39</YPos><SelStart>1033</SelStart><SelEnd>1089</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\Drum.c</Filename><XPos>0</XPos><YPos>83</YPos><SelStart>2491</SelStart><SelEnd>2491</SelEnd></Tab><ActiveTab>7</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\midi.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>79</SelStart><SelEnd>79</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\midi.c</Filename><XPos>0</XPos><YPos>42</YPos><SelStart>1497</SelStart><SelEnd>1497</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\Drum.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>266</SelStart><SelEnd>266</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_led.c</Filename><XPos>0</XPos><YPos>1</YPos><SelStart>403</SelStart><SelEnd>403</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_assert.c</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>1031</SelStart><SelEnd>1031</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00ab9ee8><key>iaridepm.enu1</key></Toolbar-00ab9ee8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>545</Bottom><Right>234</Right><x>-2</x><y>-2</y><xscreen>1</xscreen><yscreen>3</yscreen><sizeHorzCX>735</sizeHorzCX><sizeHorzCY>4348</sizeHorzCY><sizeVertCX>173529</sizeVertCX><sizeVertCY>792754</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>101</Bottom><Right>1362</Right><x>-2</x><y>-2</y><xscreen>1364</xscreen><yscreen>103</yscreen><sizeHorzCX>1002941</sizeHorzCX><sizeHorzCY>149275</sizeHorzCY><sizeVertCX>735</sizeVertCX><sizeVertCY>4348</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
