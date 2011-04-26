@@ -71,6 +71,8 @@
 #define TRUE 1
 #define FALSE 0
 
-char key_match(int x, int y);
+char piano_key_match(int x, int y);
+char ps2_key_match(char scancode);
+char valid_scancode[19] = {'q','2','w','3','e','4','r','5','t','6','y','7','u','8','i','9','o','0','p'};
 
 #endif
