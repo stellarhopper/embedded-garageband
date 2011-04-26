@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>CC2431_Basic/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>263</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1491</ColumnWidth1><ColumnWidth2>397</ColumnWidth2><ColumnWidth3>99</ColumnWidth3></Build>
+    <TerminalIO/><Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1990</ColumnWidth1></Debug-Log><Find-in-Files><ColumnWidth0>709</ColumnWidth0><ColumnWidth1>101</ColumnWidth1><ColumnWidth2>1215</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-8085-30753</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>CC2431_Basic</ExpandedNode><ExpandedNode>CC2431_Basic/App_Layer</ExpandedNode><ExpandedNode>CC2431_Basic/Common</ExpandedNode><ExpandedNode>CC2431_Basic/Drivers</ExpandedNode><ExpandedNode>CC2431_Basic/Interface</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30586-32173</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-26689-24679</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-10953-10254</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_rf_security.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>494</SelStart><SelEnd>494</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\basic_rf_security.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>484</SelStart><SelEnd>484</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_rf.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>405</SelStart><SelEnd>405</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Program Files\IAR Systems\Embedded Workbench 5.4 Evaluation\8051\inc\ioCC2431.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>385</SelStart><SelEnd>385</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_int.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>450</SelStart><SelEnd>450</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_rf.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>342</SelStart><SelEnd>490</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_assert.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>347</SelStart><SelEnd>434</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\basic_rf_security.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>372</SelStart><SelEnd>431</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\util.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>375</SelStart><SelEnd>397</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Program Files\IAR Systems\Embedded Workbench 5.4 Evaluation\8051\inc\clib\stdbool.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_assert.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>296</SelStart><SelEnd>296</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\basic_rf.c</Filename><XPos>0</XPos><YPos>470</YPos><SelStart>15585</SelStart><SelEnd>15585</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\basic_rf.h</Filename><XPos>0</XPos><YPos>32</YPos><SelStart>2455</SelStart><SelEnd>2455</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_int.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>1580</SelStart><SelEnd>1588</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\adc.h</Filename><XPos>0</XPos><YPos>67</YPos><SelStart>3209</SelStart><SelEnd>3209</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Project.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>989</SelStart><SelEnd>989</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_hardware_board.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>506</SelStart><SelEnd>506</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_MMC_hardware_board.h</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>2023</SelStart><SelEnd>2023</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\main_mmc.c</Filename><XPos>0</XPos><YPos>48</YPos><SelStart>3551</SelStart><SelEnd>3578</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_SPI.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>1371</SelStart><SelEnd>1371</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_button.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>633</SelStart><SelEnd>633</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_rf_security.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>490</SelStart><SelEnd>490</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_digio.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1627</SelStart><SelEnd>1627</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\mmc.c</Filename><XPos>0</XPos><YPos>93</YPos><SelStart>4539</SelStart><SelEnd>4546</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_SPI.c</Filename><XPos>0</XPos><YPos>164</YPos><SelStart>7358</SelStart><SelEnd>7358</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\TouchScreen.h</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>1424</SelStart><SelEnd>1424</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Program Files\IAR Systems\Embedded Workbench 5.4 Evaluation\8051\inc\ioCC2430.h</Filename><XPos>0</XPos><YPos>311</YPos><SelStart>22158</SelStart><SelEnd>22163</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_timer_32k.c</Filename><XPos>0</XPos><YPos>54</YPos><SelStart>1986</SelStart><SelEnd>1999</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Common\hal_types.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>522</SelStart><SelEnd>528</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\uart_intfc.c</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>17245</SelStart><SelEnd>17245</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_led.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>642</SelStart><SelEnd>654</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\uart_intfc.h</Filename><XPos>0</XPos><YPos>63</YPos><SelStart>4550</SelStart><SelEnd>4550</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\clock.c</Filename><XPos>0</XPos><YPos>24</YPos><SelStart>2057</SelStart><SelEnd>2057</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\clock.h</Filename><XPos>0</XPos><YPos>5</YPos><SelStart>1347</SelStart><SelEnd>1347</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_timer_32k.h</Filename><XPos>0</XPos><YPos>15</YPos><SelStart>3020</SelStart><SelEnd>3020</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\uart.c</Filename><XPos>0</XPos><YPos>217</YPos><SelStart>8459</SelStart><SelEnd>8459</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_mcu.h</Filename><XPos>0</XPos><YPos>12</YPos><SelStart>1030</SelStart><SelEnd>1042</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\TimerManager.h</Filename><XPos>0</XPos><YPos>19</YPos><SelStart>1791</SelStart><SelEnd>1791</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_digio.c</Filename><XPos>0</XPos><YPos>391</YPos><SelStart>10187</SelStart><SelEnd>10820</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_board.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>605</SelStart><SelEnd>605</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_digio.h</Filename><XPos>0</XPos><YPos>22</YPos><SelStart>1045</SelStart><SelEnd>1045</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_led.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1014</SelStart><SelEnd>1014</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_board.h</Filename><XPos>0</XPos><YPos>69</YPos><SelStart>2716</SelStart><SelEnd>2726</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\uart.h</Filename><XPos>0</XPos><YPos>34</YPos><SelStart>5526</SelStart><SelEnd>5526</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\util_buffer.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Program Files\IAR Systems\Embedded Workbench 5.4 Evaluation\8051\INC\CLIB\string.h</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1272</SelStart><SelEnd>1272</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\Drum.c</Filename><XPos>0</XPos><YPos>54</YPos><SelStart>2159</SelStart><SelEnd>2159</SelEnd></Tab><ActiveTab>46</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\Drum.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>360</SelStart><SelEnd>360</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\adc.c</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>1076</SelStart><SelEnd>1076</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\App_Layer\Main.c</Filename><XPos>0</XPos><YPos>175</YPos><SelStart>2464</SelStart><SelEnd>2464</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\hal_button.c</Filename><XPos>0</XPos><YPos>36</YPos><SelStart>1501</SelStart><SelEnd>1520</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Common\hal_cc8051.h</Filename><XPos>0</XPos><YPos>60</YPos><SelStart>3792</SelStart><SelEnd>3792</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\mmc.h</Filename><XPos>0</XPos><YPos>69</YPos><SelStart>4275</SelStart><SelEnd>4275</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\TouchScreen.c</Filename><XPos>0</XPos><YPos>155</YPos><SelStart>5180</SelStart><SelEnd>5180</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Drivers\hal_mcu.c</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1118</SelStart><SelEnd>1130</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Common\hal_defs.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>1130</SelStart><SelEnd>1130</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\Interface\TimerManager.c</Filename><XPos>0</XPos><YPos>272</YPos><SelStart>8784</SelStart><SelEnd>8784</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0140fbb0><key>iaridepm.enu1</key></Toolbar-0140fbb0></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>783</Bottom><Right>354</Right><x>-2</x><y>-2</y><xscreen>2</xscreen><yscreen>5</yscreen><sizeHorzCX>977</sizeHorzCX><sizeHorzCY>4673</sizeHorzCY><sizeVertCX>173828</sizeVertCX><sizeVertCY>733645</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>242</Bottom><Right>2050</Right><x>-2</x><y>-2</y><xscreen>2052</xscreen><yscreen>244</yscreen><sizeHorzCX>1001953</sizeHorzCX><sizeHorzCY>228037</sizeHorzCY><sizeVertCX>977</sizeVertCX><sizeVertCY>4673</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
