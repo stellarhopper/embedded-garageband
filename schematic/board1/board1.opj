@@ -24,7 +24,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 25 1075 25 372")
+        (Placement "44 2 3 -1 -1 -8 -30 25 1075 25 372")
         (Scroll "37 65")
         (Zoom "128")
         (Occurrence "/"))
@@ -34,8 +34,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 75 1125 75 422")
-        (Scroll "-99 0")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1125 75 422")
+        (Scroll "-16 0")
         (Zoom "100")
         (Occurrence "/"))
       (Path "C:\USERS\MAULIK\DESKTOP\ESD_PROJECT\SCHEMATIC\BOARD1\BOARD1.DSN")
