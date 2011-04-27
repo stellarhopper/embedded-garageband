@@ -129,7 +129,7 @@ char piano_key_match(int x, int y)
 		key_note=0;
 	}//end of bound check
 
-        //tx1_send(&key, 1);
+        //tx1_send(&key_note, 1);
 	return key_note;
 }
 

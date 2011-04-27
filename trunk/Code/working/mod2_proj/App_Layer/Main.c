@@ -80,7 +80,7 @@ void main(void)
   	char keyNote = 0;
 	int rfLen = 0;
 	
-    // Initalise board peripherals
+    // Initalise bo ard peripherals
     halBoardInit();
     uart_intfc_init();
 	Init_AppRF(RF_RX);
@@ -95,8 +95,10 @@ void main(void)
 	
 	midiReset();
 	midiVolSet(120);
-	midiBankSet(DRUMS1);
-	midiPatchSet(5);
+	//midiBankSet(DRUMS1);
+	//midiPatchSet(5);
+	midiBankSet(MELODY);
+	midiPatchSet(PIANO_ELG);
 	halMcuWaitMs(100);
 	
 	//1-40; 2-36; 3-48; 4-41; 5-51; drum notes
@@ -104,15 +106,14 @@ void main(void)
 	noteOn(0, 40, 0x7f);
 	halMcuWaitMs(500);
 
-	DrumSet();
-	while (1);
+	//DrumSet();
 	
-//	while (1) {
-//		while (!RF_Peek());
-//		rfLen = RF_Receive(&keyNote);	
-//		noteOn(0, keyNote, 0x3D);
-//		tx1_send(&keyNote, 1);
-//	}
+	while (1) {
+		while (!RF_Peek());
+		rfLen = RF_Receive(&keyNote);	
+		noteOn(0, keyNote, 0x3D);
+		tx1_send(&keyNote, 1);
+	}
 	
 	
 }

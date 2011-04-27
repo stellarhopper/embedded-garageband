@@ -120,43 +120,43 @@ __idata_reentrant __interrupt void uart_1_rx_irq( void )
  *
  * output parameters
  *
- * @return   
+ * @return
  */
 void uart1_tx_irq( void )
   {
   unsigned char c;
   uart_get_tx_data_type handler;
-  
+
   BSP_CRITICAL_STATEMENT( handler = uart1_tx_handler );
-  
-  /* if a handler exists */ 
+
+  /* if a handler exists */
   if( handler != NULL )
     {
     if( (*handler)( &c ) != false ) /* if this is not the last byte to send */
       {
       bspIState_t intState;
       BSP_ENTER_CRITICAL_SECTION( intState );
-      
+
       /* only reset the interrupt flag if we have additional data to send
        * that way, if we are done then the interrupt is still pending and
        * will be immediately entered upon re-enabling it.*/
       UART_IRQ_FLAG_CLR( UART_NUMBER_1, UART1_LOCATION, TX ); /* eset the interrupt */
-      
+
       BSP_EXIT_CRITICAL_SECTION( intState );
       }
     else
       {
       bspIState_t intState;
       BSP_ENTER_CRITICAL_SECTION( intState );
-      
+
       /* we're done sending data.  since we left the interrupt pending,
        * disable it so we don't re-enter the isr.  the interrupt will be
        * re-enabled when there is another message to send. */
       UART_IRQ_DISABLE( UART_NUMBER_1, UART1_LOCATION, TX );
-      
+
       /* no more data to send, reset the handler to flag not busy */
       uart1_tx_handler = NULL;
-      
+
       BSP_EXIT_CRITICAL_SECTION( intState );
       }
 
@@ -178,28 +178,28 @@ void uart1_tx_irq( void )
  *
  * output parameters
  *
- * @return   
+ * @return
  */
 void uart_rx_irq( void )
   {
   uart_put_rx_data_type handler;
-  
+
   /* read in the received data, this will clear the interrupt also */
   unsigned char c = UART_RECEIVE( UART_NUMBER_1, UART1_LOCATION );
-  
+
   BSP_CRITICAL_STATEMENT( handler = uart_rx_handler );
-  
+
   if( handler != NULL ) /* if a handler exists to receive data */
     if( ( *handler)( c ) == false ) /* if the user is done receiveing */
       /* indicate the receiver is available */
       BSP_CRITICAL_STATEMENT( uart_rx_handler = NULL );
-    
+
   return;
   }
 
 /******************************************************************************
  * GLOBAL FUNCTIONS
- */ 
+ */
 
 /******************************************************************************
  * @fn          uart_init
@@ -210,7 +210,7 @@ void uart_rx_irq( void )
  *
  * output parameters
  *
- * @return   
+ * @return
  */
 void uart_init( void )
   {
@@ -228,7 +228,7 @@ void uart_init( void )
              UART_PARITY_MODE,     /* enable/disable parity */
              UART_STOP_BITS,       /* number of stop bits */
              UART1_BAUD_RATE );     /* baud rate to use */
-   
+
   i = UART1_BAUD_RATE >> 5; /* delay approximately 1 bit time */
   while( --i != 0 ) /* give the uart some time to initialize */
       ; /* null statement */
@@ -237,10 +237,10 @@ void uart_init( void )
    * that way when a message is sent and the irq is enabled, the interrupt
    * will happen immediately to start the transmission */
   UART_IRQ_FLAG_SET( UART_NUMBER_1, UART1_LOCATION, TX ); /* set the interrupt */
-  
+
   /* enable receive interrupts, they are always welcome. */
-  //UART_IRQ_ENABLE( UART_NUMBER_1, UART1_LOCATION, RX ); 
-  
+  UART_IRQ_ENABLE( UART_NUMBER_1, UART1_LOCATION, RX );
+
   /* initialize the uart interface for operations */
   UART_INIT( UART_NUMBER_0,
              UART_LOCATION_2,
@@ -248,10 +248,10 @@ void uart_init( void )
              UART_PARITY_MODE,     /* enable/disable parity */
              UART_STOP_BITS,       /* number of stop bits */
              UART0_BAUD_RATE );     /* baud rate to use */
-  
+
   UART_IRQ_FLAG_SET( UART_NUMBER_0, UART0_LOCATION, TX ); /* set the interrupt */
-  
-  //UART_IRQ_DISABLE(UART_NUMBER_0,UART_LOCATION_2,RX);
+
+  UART_IRQ_DISABLE(UART_NUMBER_0,UART_LOCATION_2,RX);
 
   return;
   }
@@ -267,7 +267,7 @@ void uart_init( void )
  * @return   Status of the operation.
  *           true                 Transmit handler successfully installed
  *           false                Message being sent or handler is invalid
- *                                
+ *
  */
 bool uart1_tx_message( uart_get_tx_data_type handler )
   {
@@ -284,13 +284,13 @@ bool uart1_tx_message( uart_get_tx_data_type handler )
 
     /* once the handler has been setup, enable the interrupt.
      * this will cause the message to begin transmission */
-    UART_IRQ_ENABLE( UART_NUMBER_1, UART1_LOCATION, TX ); 
+    UART_IRQ_ENABLE( UART_NUMBER_1, UART1_LOCATION, TX );
 
-    status = true; /* indicate success */    
+    status = true; /* indicate success */
     }
 
   BSP_EXIT_CRITICAL_SECTION(intState); /* restore interrupt state */
-    
+
   return status; /* indicate status */
   }
 
@@ -305,13 +305,13 @@ bool uart1_tx_message( uart_get_tx_data_type handler )
  * @return   Status of the operation.
  *           true                 Receive handler successfully installed
  *           false                Message being received or handler is invalid
- *                                
+ *
  */
 bool uart_rx_message( uart_put_rx_data_type handler )
   {
   bspIState_t intState;
   bool status = false;  /* assume failure initially */
-  
+
   /* updates required, store interrupt state and disable interrupts */
   BSP_ENTER_CRITICAL_SECTION(intState);
 
@@ -322,9 +322,9 @@ bool uart_rx_message( uart_put_rx_data_type handler )
 
     status = true; /* indicate success */
     }
-  
+
   BSP_EXIT_CRITICAL_SECTION(intState); /* restore interrupt state */
-    
+
   return status; /* indicate status */
   }
 
@@ -337,43 +337,43 @@ bool uart_rx_message( uart_put_rx_data_type handler )
  *
  * output parameters
  *
- * @return   
+ * @return
  */
 void uart0_tx_irq( void )
   {
   unsigned char c;
   uart_get_tx_data_type handler;
-  
+
   BSP_CRITICAL_STATEMENT( handler = uart0_tx_handler );
-  
-  /* if a handler exists */ 
+
+  /* if a handler exists */
   if( handler != NULL )
     {
     if( (*handler)( &c ) != false ) /* if this is not the last byte to send */
       {
       bspIState_t intState;
       BSP_ENTER_CRITICAL_SECTION( intState );
-      
+
       /* only reset the interrupt flag if we have additional data to send
        * that way, if we are done then the interrupt is still pending and
        * will be immediately entered upon re-enabling it.*/
       UART_IRQ_FLAG_CLR( UART_NUMBER_0, UART0_LOCATION, TX ); /* eset the interrupt */
-      
+
       BSP_EXIT_CRITICAL_SECTION( intState );
       }
     else
       {
       bspIState_t intState;
       BSP_ENTER_CRITICAL_SECTION( intState );
-      
+
       /* we're done sending data.  since we left the interrupt pending,
        * disable it so we don't re-enter the isr.  the interrupt will be
        * re-enabled when there is another message to send. */
       UART_IRQ_DISABLE( UART_NUMBER_0, UART0_LOCATION, TX );
-      
+
       /* no more data to send, reset the handler to flag not busy */
       uart0_tx_handler = NULL;
-      
+
       BSP_EXIT_CRITICAL_SECTION( intState );
       }
 
@@ -398,7 +398,7 @@ void uart0_tx_irq( void )
  * @return   Status of the operation.
  *           true                 Transmit handler successfully installed
  *           false                Message being sent or handler is invalid
- *                                
+ *
  */
 bool uart0_tx_message( uart_get_tx_data_type handler )
   {
@@ -415,12 +415,12 @@ bool uart0_tx_message( uart_get_tx_data_type handler )
 
     /* once the handler has been setup, enable the interrupt.
      * this will cause the message to begin transmission */
-    UART_IRQ_ENABLE( UART_NUMBER_0, UART0_LOCATION, TX ); 
+    UART_IRQ_ENABLE( UART_NUMBER_0, UART0_LOCATION, TX );
 
-    status = true; /* indicate success */    
+    status = true; /* indicate success */
     }
 
   BSP_EXIT_CRITICAL_SECTION(intState); /* restore interrupt state */
-    
+
   return status; /* indicate status */
   }
