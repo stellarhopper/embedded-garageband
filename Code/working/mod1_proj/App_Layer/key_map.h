@@ -1,73 +1,106 @@
 #ifndef KEY_MAP_H
 #define KEY_MAP_H
 
-#define xmax	4600 - x_offset
-#define xmin	1100 + x_offset
+#define xmax	4425
+#define xmin	1225
 #define ymax	3594
 #define ymin	1806
 
-#define x_offset 175
-#define y_offset 175
+//PIANO STUFF-------------------------
 
-#define black_key_ymin	1600
+#define black_key_ymin	1806
 #define black_key_ymax	2912
 
-#define keyA_xmin 	4407 - x_offset
-#define keyA_xmax	4600 - x_offset
+#define keyA_xmin 	4284
+#define keyA_xmax	4425	
 
-#define keyB_xmin	3828 - x_offset
-#define keyB_xmax	4021 - x_offset
+#define keyB_xmin	3719
+#define keyB_xmax	3896
 
-#define keyC_xmin	3250 - x_offset
-#define keyC_xmax	3442 - x_offset
+#define keyC_xmin	3190
+#define keyC_xmax	3367
 
-#define keyD_xmin	2671 - x_offset
-#define keyD_xmax	2864 - x_offset
+#define keyD_xmin	2661
+#define keyD_xmax	2838
 
-#define keyE_xmin	2092 - x_offset
-#define keyE_xmax	2285 - x_offset
+#define keyE_xmin	2132
+#define keyE_xmax	2309
 
-#define keyF_xmin	1514 - x_offset
-#define keyF_xmax	1707 - x_offset
+#define keyF_xmin	1603
+#define keyF_xmax	1780
 
-#define key1_xmax	4600 - x_offset
-#define key1_xmin	4517 - x_offset
+#define key1_xmax	4425
+#define key1_xmin	4349
 
-#define key2_xmax	4517 - x_offset
-#define key2_xmin	4214 - x_offset
+#define key2_xmax	4349
+#define key2_xmin	4072
 
-#define key3_xmax	4214 - x_offset
-#define key3_xmin	3911 - x_offset
+#define key3_xmax	4072
+#define key3_xmin	3795
 
-#define key4_xmax	3911 - x_offset
-#define key4_xmin	3635 - x_offset
+#define key4_xmax	3795
+#define key4_xmin	3543
 
-#define key5_xmax	3635 - x_offset
-#define key5_xmin	3360 - x_offset
+#define key5_xmax	3543
+#define key5_xmin	3291
 
-#define key6_xmax	3360 - x_offset
-#define key6_xmin	3057 - x_offset
+#define key6_xmax	3291
+#define key6_xmin	3014
 
-#define key7_xmax	3057 - x_offset
-#define key7_xmin	2754 - x_offset
+#define key7_xmax	3014
+#define key7_xmin	2737
 
-#define key8_xmax	2754 - x_offset
-#define key8_xmin	2478 - x_offset
+#define key8_xmax	2737	
+#define key8_xmin	2485
 
-#define key9_xmax	2478 - x_offset
-#define key9_xmin	2203 - x_offset
+#define key9_xmax	2485
+#define key9_xmin	2233
 
-#define key10_xmax	2203 - x_offset
-#define key10_xmin	1900 - x_offset
+#define key10_xmax	2233
+#define key10_xmin	1956
 
-#define key11_xmax	1900 - x_offset
-#define key11_xmin	1597 - x_offset
+#define key11_xmax	1956
+#define key11_xmin	1679
 
-#define key12_xmax	1597 - x_offset
-#define key12_xmin	1294 - x_offset
+#define key12_xmax	1679
+#define key12_xmin	1402
 
-#define key13_xmax	1294 - x_offset
-#define key13_xmin	1100 - x_offset
+#define key13_xmax	1402
+#define key13_xmin	1225
+
+
+//DRUMS STUFF---------------------------------------------
+
+
+#define square1_xmin	3568
+#define square1_xmax	4425
+#define square1_ymin	2629
+#define square1_ymax	3594
+
+#define square2_xmin	2963
+#define square2_xmax	3820
+#define square2_ymin	1834
+#define square2_ymax	2799
+
+#define square3_xmin	2384
+#define square3_xmax	3241
+#define square3_ymin	2629
+#define square3_ymax	3594
+
+#define square4_xmin	1830
+#define square4_xmax	2686
+#define square4_ymin	1834
+#define square4_ymax	2799
+
+#define square5_xmin	1251
+#define square5_xmax	2107
+#define square5_ymin	2629
+#define square5_ymax	3594
+
+char drum_key_match(int x, int y);
+
+
+//COMMON-------------------------------
 
 
 #define ISBETWEEN(B, A, C) ( ((A-B) >= 0) && ((A-C) <= 0) )
@@ -76,7 +109,6 @@
 
 char piano_key_match(int x, int y);
 char ps2_key_match(char scancode);
-
 static const char valid_scancode[19] = {'q','2','w','3','e','4','r','5','t','6','y','7','u','8','i','9','o','0','p'};
 
 #endif
