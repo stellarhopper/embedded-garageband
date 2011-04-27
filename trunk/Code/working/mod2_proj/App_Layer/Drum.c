@@ -11,6 +11,7 @@
 #include "TimerManager.h"
 #include "Drum.h"
 #include "midi.h"
+#include "utilMisc.h"
 
 
 
@@ -65,41 +66,49 @@ void Intitialize_Drumset()
 void DrumSet()
 {
   int drumNo = 0;
+	char cmd = 0;
+	
   Intitialize_Drumset();
 	
   while(1)
   {
-    if(P0 & 0x3F)
-    {
-      tmp_port = P0;
-      for(inn=0;inn<6;inn++)
-      {
-        if((tmp_port>>inn) & 0x01)
-           break;
-      }
-      if(inn<6 && timerID_DR[inn] == TimerId_INVALID)
-      {
-         timerID_DR[inn] = SetTimerReq(&Drum_ISR,200);
-         //halLedToggle(1);
-         P0IFG &= ~(1<<inn);
-         Capture_DR[inn] = 0;
-      }
-    }
-
-    if(Print_Flag == 1)
-    {
-	  //1-40; 2-36; 3-48; 4-41; 5-51; drum notes
-	  if      (tx1_buf[1]==0) drumNo=48;
-	  else if (tx1_buf[1]==1) drumNo=41;
-	  else if (tx1_buf[1]==2) drumNo=51;
-	  else if (tx1_buf[1]==3) drumNo=40;
-	  else if (tx1_buf[1]==4) drumNo=36;
+		cmd = getchar_pc_nb();
+		if (cmd == 27) {
+			break;
+		}
+		else {
+			if(P0 & 0x3F)
+			{
+				tmp_port = P0;
+				for(inn=0;inn<6;inn++)
+				{
+					if((tmp_port>>inn) & 0x01)
+						 break;
+				}
+				if(inn<6 && timerID_DR[inn] == TimerId_INVALID)
+				{
+					 timerID_DR[inn] = SetTimerReq(&Drum_ISR,200);
+					 //halLedToggle(1);
+					 P0IFG &= ~(1<<inn);
+					 Capture_DR[inn] = 0;
+				}
+			}
 	
-	  noteOn(0, drumNo, (tx1_buf[2]+0x40)&0x7F);
-	  //noteOn(0, drumNo, 0x7F);
-      tx1_send(tx1_buf,3);
-      Print_Flag = 0;
-    }
+			if(Print_Flag == 1)
+			{
+			//1-40; 2-36; 3-48; 4-41; 5-51; drum notes
+			if      (tx1_buf[1]==0) drumNo=48;
+			else if (tx1_buf[1]==1) drumNo=41;
+			else if (tx1_buf[1]==2) drumNo=51;
+			else if (tx1_buf[1]==3) drumNo=40;
+			else if (tx1_buf[1]==4) drumNo=36;
+		
+			noteOn(0, drumNo, (tx1_buf[2]+0x40)&0x7F);
+			//noteOn(0, drumNo, 0x7F);
+				//tx1_send(tx1_buf,3);
+				Print_Flag = 0;
+			}
+		}//else of nblk getchar
   }
 }
 

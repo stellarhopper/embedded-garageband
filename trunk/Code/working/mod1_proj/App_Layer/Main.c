@@ -115,54 +115,6 @@ void main(void)
   }// end while(1)
 }
 
-void lcdTest() {
-
-  	halMcuWaitMs(3000);
-  	clear_screen_lcd();		//Clears LCD screen
-    draw_piano();			//Draws a Piano
-//    halMcuWaitMs(1000);				//Give some time for it to draw.
-//    clear_screen_lcd();		//Clear LCD screen
-//    draw_drums();			//Draw Drums now
-//	halMcuWaitMs(1000);
-
-    //while(1);
-}
-
-void midiTest() {
-	
-	//tx0_send("Hello World\n\r", 13);
-	
-  	midiReset();
-	
-	//tx1_send("3", 1);
-	
-	midiVolSet(120); //set channel volume to near max (127)
-	midiBankSet(MELODY); //0x79 = melodious instruments
-	//talkMIDI(0xD0, instrument, 0); //Set instrument number. 0xC0 is a 1 data byte command
-	midiPatchSet(118);
-	
-	noteOn(0, 51, 0x3D);
-	halMcuWaitMs(500);
-	
-	
-//	for (i=0; i<50; i++) {
-//		noteOn(0, i+30, 0x48);
-//		halMcuWaitMs(100);
-//		//noteOff(0, i+30, 0x48);
-//		halMcuWaitMs(100);
-//
-//	}
-//	for (i=50; i>=0; i--) {
-//		noteOn(0, i+30, 0x48);
-//		halMcuWaitMs(100);
-//		//noteOff(0, i+30, 0x48);
-//		halMcuWaitMs(100);
-//	}
-	
-	//tx1_send("Done\n\r", 6);
-	while (1);
-}
-
 
 void App_ISR1(TimerId timerId)
 {

@@ -15,22 +15,22 @@
 
 void playVPiano() {
 	
-	unsigned char usrExit = 0;
+	unsigned char usrExit[] = {0};
 	char keyNote = 0;
 	unsigned int xCoord = 0;
 	unsigned int yCoord = 0;
 	unsigned char sendBuf[3] = {0};
 	
 	while(1) {
-		//usrExit = getchar() nblocking in M2
-		//In this module do a non blocking recv and chk for STOPMAGIC
-		if (usrExit == 27) {
-			break;
+		if (RF_gets_nblk(usrExit) != 0) {
+			if (strncmp (usrExit, "STOP", 4) == 0) {
+				break;
+			}
 		}
 		else {
 			getTsXY(&xCoord, &yCoord);
 			keyNote = piano_key_match(xCoord, yCoord);
-			halMcuWaitMs(50);
+			halMcuWaitMs(20);
 			if (keyNote) {
 				//send the note over rf and serial
 				sendBuf[0] = 0;					//Channel
@@ -49,22 +49,22 @@ void playRPiano() {
 
 void playVGuitar() {
 	
-	unsigned char usrExit = 0;
+	unsigned char usrExit[] = {0};
 	char keyNote = 0;
 	unsigned int xCoord = 0;
 	unsigned int yCoord = 0;
 	unsigned char sendBuf[3] = {0};
 	
 	while(1) {
-		//usrExit = getchar() nblocking in M2
-		//In this module do a non blocking recv and chk for STOPMAGIC
-		if (usrExit == 27) {
-			break;
+		if (RF_gets_nblk(usrExit) != 0) {
+			if (strncmp (usrExit, "STOP", 4) == 0) {
+				break;
+			}
 		}
 		else {
 			getTsXY(&xCoord, &yCoord);
-			keyNote = drum_key_match(xCoord, yCoord);
-			halMcuWaitMs(50);
+			keyNote = guitar_key_match(xCoord, yCoord);
+			halMcuWaitMs(20);
 			if (keyNote) {
 				//send the note over rf and serial
 				sendBuf[0] = 0;					//Channel

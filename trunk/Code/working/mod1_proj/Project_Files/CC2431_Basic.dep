@@ -149,10 +149,6 @@
       <name>$PROJ_DIR$\..\Drivers\uart.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 15</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 51</file>
         </tool>
@@ -167,10 +163,6 @@
     <file>
       <name>$PROJ_DIR$\..\Drivers\uart_intfc.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 83</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 32</file>
@@ -187,10 +179,6 @@
       <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 20</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 13</file>
         </tool>
@@ -205,10 +193,6 @@
     <file>
       <name>$PROJ_DIR$\..\App_Layer\Drum.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 123</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 122</file>
@@ -225,10 +209,6 @@
       <name>$PROJ_DIR$\..\Interface\basic_rf.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 94</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 128</file>
         </tool>
@@ -243,10 +223,6 @@
     <file>
       <name>$PROJ_DIR$\..\Drivers\hal_mcu.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 130</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 81</file>
@@ -263,10 +239,6 @@
       <name>$PROJ_DIR$\..\App_Layer\piano.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 92</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 88</file>
         </tool>
@@ -281,10 +253,6 @@
     <file>
       <name>$PROJ_DIR$\..\App_Layer\key_map.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 116</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 39</file>
@@ -310,10 +278,6 @@
       <name>$PROJ_DIR$\..\App_Layer\utilMisc.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 89</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 93</file>
         </tool>
@@ -329,10 +293,6 @@
       <name>$PROJ_DIR$\..\Interface\basic_rf_security.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 115</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 26</file>
         </tool>
@@ -341,10 +301,6 @@
     <file>
       <name>$PROJ_DIR$\..\Interface\hal_assert.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 0</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 4</file>
@@ -361,10 +317,6 @@
       <name>$PROJ_DIR$\..\Interface\TimerManager.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 11</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 82</file>
         </tool>
@@ -379,10 +331,6 @@
     <file>
       <name>$PROJ_DIR$\..\Interface\TouchScreen.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 31</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 60</file>
@@ -422,10 +370,6 @@
       <name>$PROJ_DIR$\..\Interface\hal_board.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 61</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 25</file>
         </tool>
@@ -440,10 +384,6 @@
     <file>
       <name>$PROJ_DIR$\..\Drivers\adc.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 131</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 79</file>
@@ -460,10 +400,6 @@
       <name>$PROJ_DIR$\..\Interface\hal_button.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 119</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 36</file>
         </tool>
@@ -478,10 +414,6 @@
     <file>
       <name>$PROJ_DIR$\..\Drivers\kb.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 63</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 108</file>
@@ -498,10 +430,6 @@
       <name>$PROJ_DIR$\..\Drivers\clock.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 3</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 28</file>
         </tool>
@@ -516,10 +444,6 @@
     <file>
       <name>$PROJ_DIR$\..\Drivers\graphics_lcd.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 49</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 55</file>
@@ -545,10 +469,6 @@
       <name>$PROJ_DIR$\..\Drivers\hal_rf_security.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 12</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 27</file>
         </tool>
@@ -563,10 +483,6 @@
     <file>
       <name>$PROJ_DIR$\..\Interface\hal_led.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 91</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 38</file>
@@ -583,10 +499,6 @@
       <name>$PROJ_DIR$\..\Drivers\hal_int.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 124</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 103</file>
         </tool>
@@ -601,10 +513,6 @@
     <file>
       <name>$PROJ_DIR$\..\Drivers\hal_rf.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 136</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 6</file>
@@ -630,10 +538,6 @@
       <name>$PROJ_DIR$\..\Drivers\midi.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 129</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 37</file>
         </tool>
@@ -648,10 +552,6 @@
     <file>
       <name>$PROJ_DIR$\..\Interface\mmc.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 111</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 95</file>
@@ -668,10 +568,6 @@
       <name>$PROJ_DIR$\..\Drivers\hal_SPI.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 104</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 127</file>
         </tool>
@@ -687,10 +583,6 @@
       <name>$PROJ_DIR$\..\Interface\util.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 80</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
           <file> 112</file>
         </tool>
@@ -705,10 +597,6 @@
     <file>
       <name>$PROJ_DIR$\..\Interface\util_buffer.c</name>
       <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 62</file>
-        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 21</file>

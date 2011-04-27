@@ -62,6 +62,14 @@ uint8 RF_gets_blk(unsigned char *bufptr) {
   return RF_Receive(bufptr);	
 }
 
+uint8 RF_gets_nblk(unsigned char *bufptr) {
+
+  if (RF_Peek()) {
+  	return RF_Receive(bufptr);	
+	}
+	else return 0;
+}
+
 bool RF_puts(unsigned char *bufptr) {
   return RF_Send(bufptr, strlen((const char*)bufptr));
 }

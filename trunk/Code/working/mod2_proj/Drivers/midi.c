@@ -84,7 +84,7 @@ void talkMIDI(unsigned char cmd, unsigned char data1, unsigned char data2) {
 			tx1_send(&data2, 1);
 		}
 	}
-	tx1_send(rfBufMidi, 3);
+	//tx1_send(rfBufMidi, 3);
 }
 
 void midiVolSet(unsigned char vol) {

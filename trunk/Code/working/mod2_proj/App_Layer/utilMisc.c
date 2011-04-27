@@ -56,3 +56,16 @@ int getstr (char *s) {
 	putchar_pc('\r');
 	return (i-1);
 }
+
+char getchar_pc_nb(void) {
+	
+	char ch = 0;
+	
+  if (rx_peek())
+	{
+		rx_receive((void*)&ch, 1);
+		return ch;
+	}
+	else
+		return 0;
+}

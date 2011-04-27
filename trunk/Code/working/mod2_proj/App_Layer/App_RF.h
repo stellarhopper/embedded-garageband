@@ -54,6 +54,7 @@ bool RF_Send(unsigned char *bufptr, unsigned int len);
 bool RF_Peek();
 uint8 RF_Receive(unsigned char *bufptr);
 uint8 RF_gets_blk(unsigned char *bufptr);
+uint8 RF_gets_nblk(unsigned char *bufptr);
 bool RF_puts(unsigned char *bufptr);
 bool RF_puts_SD (unsigned char *bufptr, unsigned int len);
 
