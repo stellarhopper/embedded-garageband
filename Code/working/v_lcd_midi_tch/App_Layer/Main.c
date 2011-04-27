@@ -227,27 +227,18 @@ static void appSwitch()
 */
 void main(void)
 {	
-  	int i = 20;
-
     uint8 appMode = NONE;
 
     // Initalise board peripherals
     halBoardInit();
     //uart_init();
-
     uart_intfc_init();
-
     //tx1_send("in", 2);
-
+	
     //MMC_Test();
-	
 	//midiTest();
-	
-	if(isBetween(i, 20, 40)) {
-		lcdTest();
-		TouchScreen();
-	}
-	
+	lcdTest();
+	TouchScreen();
 }
 
 

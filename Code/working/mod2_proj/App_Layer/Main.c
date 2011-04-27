@@ -47,8 +47,18 @@ extern char guitar_type;
 extern char audio_termination;
 extern char record_notes;
 extern char play_recorded_notes;
+extern char track;
+extern char playback;
 
 unsigned char endPacket[3] = {0xFF, 0xFF, 0xFF};
+unsigned char Record_0[] = "Record_0";
+unsigned char Record_1[] = "Record_1";
+unsigned char Record_2[] = "Record_2";
+unsigned char Record_3[] = "Record_3";
+unsigned char Play_0[] = "Play_0";
+unsigned char Play_1[] = "Play_1";
+unsigned char Play_2[] = "Play_2";
+unsigned char Play_3[] = "Play_3";
 
 TimerId timerID1 = TimerId_INVALID;
 TimerId timerID2 = TimerId_INVALID;
@@ -64,7 +74,7 @@ void main(void)
 {	
 	unsigned char cmd = 0;
 	char keyNote = 0;
-	char printBuf[50] = {0};
+	//char printBuf[50] = {0};
 	
 	// Initalise board peripherals
   halBoardInit();
@@ -77,33 +87,45 @@ void main(void)
 	halMcuWaitMs(1000);
 	
 	RF_puts("HELLO");
-	//RF_gets_blk(rfBuf);
+	RF_gets_blk(rfBuf);
 	//printf_pc(rfBuf);
 	
 	while(1) {
 		bzero(rfBuf, SZ_RFBUF);
 		start_my_menu();
 		
-		sprintf(printBuf, "drum_piano_guitar_rv = %d\n\r", drum_piano_guitar_rv);
-		printf_pc(printBuf);
-		
 		if (record_notes == TRUE) {
-			RF_puts_SD("Record_0", 8);
+			switch (track) {
+				case 0: RF_puts_SD(Record_0, 8); break;
+				case 1: RF_puts_SD(Record_1, 8); break;
+				case 2: RF_puts_SD(Record_2, 8); break;
+				case 3: RF_puts_SD(Record_3, 8); break;
+				default: break;
+			}
 		}
 		
 		if (play_recorded_notes == TRUE) {
-			printf_pc("Will play recorded notes\n\r");	
-			RF_puts_SD("Play_0", 6);
+			printf_pc("\n\rWill play recorded notes\n\r");	
+			midiReset();
+			switch (playback) {
+				case 0: RF_puts_SD(Play_0, 6); break;
+				case 1: RF_puts_SD(Play_1, 6); break;
+				case 2: RF_puts_SD(Play_2, 6); break;
+				case 3: RF_puts_SD(Play_3, 6); break;
+				default: break;
+			}
 			playRfNotesSD();
 		}
 		else {
 			switch (drum_piano_guitar_rv) {
 				case DRUM_REAL_INSTRUMENT:
 					midiInit();
+					DrumSet();
+					RF_puts_SD(endPacket, 3);
 					break;
 					
 				case PIANO_REAL_INSTRUMENT:
-					printf_pc("PIANO_REAL_INSTRUMENT\n\r");
+					//printf_pc("PIANO_REAL_INSTRUMENT\n\r");
 					midiInit();
 					while(1) {
 						cmd = getchar_pc();
@@ -122,30 +144,33 @@ void main(void)
 					break;
 					
 				case DRUM_VIRTUAL_INSTRUMENT:
-					printf_pc("DRUM_VIRTUAL_INSTRUMENT\n\r");
+					//printf_pc("DRUM_VIRTUAL_INSTRUMENT\n\r");
 					midiInit();
 					RF_puts("VDRUM");
 					RF_gets_blk(rfBuf);
 					printf_pc(rfBuf);
 					playRfNotes();
+					RF_puts_SD(endPacket, 3);
 					break;
 					
 				case PIANO_VIRTUAL_INSTRUMENT:
-					printf_pc("PIANO_VIRTUAL_INSTRUMENT\n\r");
+					//printf_pc("PIANO_VIRTUAL_INSTRUMENT\n\r");
 					midiInit();
 					RF_puts("VPIANO");
 					RF_gets_blk(rfBuf);
 					printf_pc(rfBuf);
 					playRfNotes();
+					RF_puts_SD(endPacket, 3);
 					break;
 					
 				case GUITAR_VIRTUAL_INSTRUMENT:
-					printf_pc("GUITAR_VIRTUAL_INSTRUMENT\n\r");
+					//printf_pc("GUITAR_VIRTUAL_INSTRUMENT\n\r");
 					midiInit();
 					RF_puts("VGUITAR");
 					RF_gets_blk(rfBuf);
 					printf_pc(rfBuf);
 					playRfNotes();
+					RF_puts_SD(endPacket, 3);
 					break;
 					
 				default:
@@ -171,13 +196,15 @@ void playRfNotes() {
 	char cmd = 0;
 	
 	while (1) {
-		//TODO usrExit = getchar() nblocking
+		cmd = getchar_pc_nb();
 		if (cmd == 27) {
+			RF_puts("STOP");
 			break;
 		}
 		else {
-			RF_gets_blk(rfBuf);
-			noteOn(rfBuf[0], rfBuf[1], rfBuf[2]);
+			if (RF_gets_nblk(rfBuf) != 0) {
+				noteOn(rfBuf[0], rfBuf[1], rfBuf[2]);
+			}
 		}
 	}
 }
@@ -187,16 +214,20 @@ void playRfNotesSD() {
 	char cmd = 0;
 	
 	while (1) {
-		//TODO usrExit = getchar() nblocking
+		cmd = getchar_pc_nb();
 		if (cmd == 27) {
 			break;
 		}
 		else {
-			RF_gets_blk(rfBuf);
-			tx1_send(rfBuf, 3);
-			talkMIDI(rfBuf[0], rfBuf[1], rfBuf[2]);
+			if (RF_gets_nblk(rfBuf) != 0) {
+				tx1_send(rfBuf, 3);
+				talkMIDI(rfBuf[0], rfBuf[1], rfBuf[2]);
+				if (rfBuf[0] == 0xFF && rfBuf[1] == 0xFF && rfBuf[2] == 0xFF) {
+					break;
+				}
+			}
 		}
-	}
+	}//while (1)
 }
 
 void midiTest() {

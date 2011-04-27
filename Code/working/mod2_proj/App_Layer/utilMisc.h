@@ -14,5 +14,5 @@ void printf_pc_code(char __code *buf);
 void putchar_pc(char buf);
 char getchar_pc(void);
 int getstr (char *s);
-
+char getchar_pc_nb(void);
 #endif
