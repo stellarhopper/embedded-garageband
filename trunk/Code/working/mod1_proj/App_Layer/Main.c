@@ -24,80 +24,101 @@
 #include "key_map.h"
 #include "App_RF.h"
 #include "kb.h"
+#include "utilMisc.h"
+#include "piano.h"
 
-unsigned long cardSize = 0;
-unsigned char status = 1;
-unsigned int timeout = 0;
-int i = 0;
-unsigned char buffer[512];
-char tx_buf[50];
 
+#define SZ_RFBUF 50
+
+#define bzero(b,len) (memset((b), '\0', (len)), (void) 0)
+
+enum Numbers {
+	rfHello = 1,
+	rfVPiano,
+	rfVDrum,
+	rfVGuitar,
+	rfRPiano
+};
+
+unsigned char rfBuf[SZ_RFBUF] = {0};
 unsigned char Check_Flag = 1;
-//unsigned int tmp_val = 0;
-char tmp_val;
 
-   //--------------------------------------------------------------------------
-   //  Timers:
-   //--------------------------------------------------------------------------
-   TimerId timerID1 = TimerId_INVALID;
-   TimerId timerID2 = TimerId_INVALID;
+TimerId timerID1 = TimerId_INVALID;
+TimerId timerID2 = TimerId_INVALID;
 
-
-/***********************************************************************************
-* CONSTANTS
-*/
-
-
-/***********************************************************************************
-* LOCAL VARIABLES
-*/
-
-
-/***********************************************************************************
-* LOCAL FUNCTIONS
-*/
-void MMC_Test();
 void App_ISR1(TimerId timerId);
 void App_ISR2(TimerId timerId);
 void midiTest(void);
 void lcdTest(void);
 
 
-
-/***********************************************************************************
-* @fn          main
-*
-* @brief       This is the main entry of the "Light Switch" application.
-*              After the application modes are chosen the switch can
-*              send toggle commands to a light device.
-*
-* @param       basicRfConfig - file scope variable. Basic RF configuration
-*              data
-*              appState - file scope variable. Holds application state
-*
-* @return      none
-*/
 void main(void)
 {
-    // Initalise board peripherals
-    halBoardInit();
-    uart_intfc_init();
-	Init_AppRF(RF_TX);
-	TimerInterface_Initialize();
-    tx1_send("Hello World\n\r", 13);
+	//rf flags-----
+	unsigned char rfStatus = 0;
 	
-    //DrumSet();
-	//MMC_Test();
-	//midiTest();
-	lcdTest();
-	TouchScreen();
-	//init_kb();
-//	while(1);
-//	
-//	{
-//	  tmp_val = kb_getchar();
-//	  tx1_send(&tmp_val, 1);
-//	}
+	// Initalise board peripherals
+  halBoardInit();
+  uart_intfc_init();
+  TimerInterface_Initialize();
+	Init_AppRF();
+	halMcuWaitMs(2000);
+
+  printf_pc("Init done (M1)\n\r");
+
+  while (1) {
+		
+		bzero(rfBuf, SZ_RFBUF);
+		RF_gets_blk(rfBuf);
+		
+		if (NULL != strstr((const char*)rfBuf, "HELLO")) rfStatus = rfHello;
+		if (NULL != strstr((const char*)rfBuf, "VPIANO")) rfStatus = rfVPiano;
+		if (NULL != strstr((const char*)rfBuf, "VDRUM")) rfStatus = rfVDrum;
+		if (NULL != strstr((const char*)rfBuf, "VGUITAR")) rfStatus = rfVGuitar;
+		if (NULL != strstr((const char*)rfBuf, "RPIANO")) rfStatus = rfRPiano;
+		
+		switch (rfStatus) {
+			
+			case rfHello:
+				printf_pc("In rfHello\n\r");
+				halMcuWaitMs(100);
+				RF_puts("ACK");
+				break;
+				
+			case rfVPiano:
+				printf_pc("In rfVPiano\n\r");
+				clear_screen_lcd();						//Clears LCD screen
+    		draw_piano();									//Draws a Piano
+				RF_puts("ACK");
+				playVPiano();
+				break;
+				
+			case rfVDrum:
+				printf_pc("In rfVDrum\n\r");
+				clear_screen_lcd();						//Clear LCD screen
+				draw_drums();									//Draws Drums
+				RF_puts("ACK");
+				break;
+				
+			case rfVGuitar:
+				printf_pc("In rfVGuitar\n\r");
+				clear_screen_lcd();						//Clear LCD screen
+				draw_guitar();								//Draws Guitar Strings
+				RF_puts("ACK");
+				break;
+				
+			case rfRPiano:
+				printf_pc("In rfRPiano\n\r");
+				//init ps2
+				RF_puts("ACK");
+				break;
+				
+			default:
+				printf_pc("In default\n\r");
+				RF_puts("NACK");
+				
+		} //end switch
+  }// end while(1)
 }
 
 void lcdTest() {
@@ -114,8 +135,6 @@ void lcdTest() {
 }
 
 void midiTest() {
-
-  	int i = 0;
 	
 	//tx0_send("Hello World\n\r", 13);
 	
@@ -166,83 +185,6 @@ void App_ISR2(TimerId timerId)
   timerID2 = TimerId_INVALID;
   timerID2 = SetTimerReq(&App_ISR2,1200);
 }
-
-
-
-
-void MMC_Test()
-{
-  //while ((mmcPing() != MMC_SUCCESS));      // Wait till card is inserted
-
-    tx0_send("\n\rCard Inserted\n\r",sizeof("\n\rCard Inserted\n\r"));
-
-    //Initialisation of the MMC/SD-card
-  while (status != 0)                       // if return in not NULL an error did occur and the
-                                            // MMC/SD-card will be initialized again
-  {
-    status = mmcInit();
-    timeout++;
-    if (timeout == 150)                      // Try 50 times till error
-    {
-      sprintf (tx_buf, "No MMC/SD-card found!! %x\n", status);
-      tx0_send(tx_buf,strlen(tx_buf));
-      break;
-    }
-  }
-
-  tx0_send("Intit Success\n\r",sizeof("Intit Success\n\r"));
-
-
-  // Read the Card Size from the CSD Register
-  cardSize =  mmcReadCardSize();
-
-  sprintf(tx_buf, "Card Size: %d\n\r",cardSize);
-  tx0_send(tx_buf,strlen(tx_buf));
-
-// Clear Sectors on MMC
-  for (i = 0; i < 512; i++) buffer[i] = 0;
-  mmcWriteSector(0, buffer);                // write a 512 Byte big block beginning at the (aligned) adress
-
-  for (i = 0; i < 512; i++) buffer[i] = 0;
-  mmcWriteSector(1, buffer);                // write a 512 Byte big block beginning at the (aligned) adress
-
-
-// Write Data to MMC
-  for (i = 0; i < 512; i++) buffer[i] = i;
-  mmcWriteSector(0, buffer);                // write a 512 Byte big block beginning at the (aligned) adress
-
-  for (i = 0; i < 512; i++) buffer[i] = i+64;
-  mmcWriteSector(1, buffer);                // write a 512 Byte big block beginning at the (aligned) adress
-
-  sprintf(tx_buf, "Buffer Write Complete\n\r");
-  tx0_send(tx_buf,strlen(tx_buf));
-
-  for (i = 0; i < 512; i++) buffer[i] = 0;
-
-  mmcReadSector(0, buffer);                 // read a size Byte big block beginning at the address.
-
-  sprintf(tx_buf, "Buffer Read Sector 0:\n\r");
-  tx0_send(tx_buf,strlen(tx_buf));
-
-  for (i = 0; i < 512; i++) tx0_send(&buffer[i], 1);
-
-  mmcReadSector(1, buffer);                 // read a size Byte big block beginning at the address.
-
-  sprintf(tx_buf, "Buffer Read Sector 1:\n\r");
-  tx0_send(tx_buf,strlen(tx_buf));
-
-  for (i = 0; i < 512; i++) tx0_send(&buffer[i], 1);
-
-  for (i = 0; i < 512; i++)
-    mmcReadSector(i, buffer);               // read a size Byte big block beginning at the address.
-
-  mmcGoIdle();                              // set MMC in Idle mode
-
-  while (1);
-}
-
-
-
 
 /****************************************************************************************
   Copyright 2007 Texas Instruments Incorporated. All rights reserved.

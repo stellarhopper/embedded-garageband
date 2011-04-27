@@ -16,8 +16,8 @@
 #define APP_PAYLOAD_LENGTH        4
 #define LIGHT_TOGGLE_CMD          0
 
-#define BLIND_NODE_ADDR       0xBEEF
-#define REF_NODE_ADDR         0x2520
+#define M1ADDR					      0xBEEF
+#define M2ADDR         				0x2520
 #define LOGGER_ADDR           0x1234
 
 #define RF_TX  1
@@ -48,9 +48,11 @@ typedef struct {
 }Loc_DataPayload;
 
 
-void Init_AppRF(unsigned char Dev_Option);
+void Init_AppRF(void);
 bool RF_Send(unsigned char *bufptr, unsigned int len);
 bool RF_Peek();
 uint8 RF_Receive(unsigned char *bufptr);
+uint8 RF_gets_blk(unsigned char *bufptr);
+bool RF_puts(unsigned char *bufptr);
 
 #endif

@@ -15,75 +15,75 @@
 
 void clear_screen_lcd(void)
 {
-  char c1 = 0x7c;
-  char c2 = 0x00;
-
-  tx0_send(&c1, 1);
-  tx0_send(&c2, 1);
-
-  tx1_send(&c1, 1);
-  tx1_send(&c2, 1);
+	char c1 = 0x7c;
+	char c2 = 0x00;
+	
+	tx0_send(&c1, 1);
+	tx0_send(&c2, 1);
+	
+	tx1_send(&c1, 1);
+	tx1_send(&c2, 1);
 }
 
 void pixel(char S_R, char x, char y)
 {
-  char c1 = 0x7c;
-  char c2 = 0x10;
-
-  tx0_send(&c1, 1);
-  tx0_send(&c2, 1);
-
-  tx0_send(&x, 1);
-  tx0_send(&y, 1);
-  tx0_send(&S_R, 1);
+	char c1 = 0x7c;
+	char c2 = 0x10;
+	
+	tx0_send(&c1, 1);
+	tx0_send(&c2, 1);
+	
+	tx0_send(&x, 1);
+	tx0_send(&y, 1);
+	tx0_send(&S_R, 1);
 }
 
 void line(char S_R, char x1, char y1, char x2, char y2)
 {
-  char c1 = 0x7c;
-  char c2 = 0x0c;
-
-  tx0_send(&c1, 1);
-  tx0_send(&c2, 1);
-
-  tx0_send(&x1, 1);
-  tx0_send(&y1, 1);
-  tx0_send(&x2, 1);
-  tx0_send(&y2, 1);
-  tx0_send(&S_R, 1);
+	char c1 = 0x7c;
+	char c2 = 0x0c;
+	
+	tx0_send(&c1, 1);
+	tx0_send(&c2, 1);
+	
+	tx0_send(&x1, 1);
+	tx0_send(&y1, 1);
+	tx0_send(&x2, 1);
+	tx0_send(&y2, 1);
+	tx0_send(&S_R, 1);
 }
 
 void circle(char S_R, int x, int y, int r)
 {
-  char c1 = 0x7c;
-  char c2 = 0x03;
-
-  tx0_send(&c1, 1);
-  tx0_send(&c2, 1);
-
-  tx0_send(&x, 1);
-  tx0_send(&y, 1);
-  tx0_send(&r, 1);
-  tx0_send(&S_R, 1);
+	char c1 = 0x7c;
+	char c2 = 0x03;
+	
+	tx0_send(&c1, 1);
+	tx0_send(&c2, 1);
+	
+	tx0_send(&x, 1);
+	tx0_send(&y, 1);
+	tx0_send(&r, 1);
+	tx0_send(&S_R, 1);
 }
 
 
 void set_text_position(char x, char y)
 {
-  char c1 = 0x7c;
-  char c2 = 0x18;
-  char c3 = 0x19;
-
-  tx0_send(&c1, 1);
-  tx0_send(&c2, 1);
-  tx0_send(&x, 1);
-
-  tx0_send(&c1, 1);
-  tx0_send(&c3, 1);
-  tx0_send(&y, 1);
-
-//  putchar(0x7c); putchar(0x18); putchar(x);
-//  putchar(0x7c); putchar(0x19); putchar(y);
+	char c1 = 0x7c;
+	char c2 = 0x18;
+	char c3 = 0x19;
+	
+	tx0_send(&c1, 1);
+	tx0_send(&c2, 1);
+	tx0_send(&x, 1);
+	
+	tx0_send(&c1, 1);
+	tx0_send(&c3, 1);
+	tx0_send(&y, 1);
+	
+	//  putchar(0x7c); putchar(0x18); putchar(x);
+	//  putchar(0x7c); putchar(0x19); putchar(y);
 }
 
 
@@ -225,6 +225,34 @@ void draw_drums()
 	small_delay(700);
 	
 	//EA = 1;
+}
+
+void draw_guitar(void)
+{
+	small_delay(700);
+	line(1,0,7,127,7);
+	line(1,0,8,127,8);
+	line(1,0,9,127,9);
+	
+	small_delay(700);
+	line(1,0,18,127,18);
+	line(1,0,19,127,19);
+	
+	small_delay(700);
+	line(1,0,28,127,28);
+	line(1,0,29,127,29);
+	
+	small_delay(700);
+	line(1,0,39,127,39);
+	
+	small_delay(700);
+	line(1,0,48,127,48);
+	
+	small_delay(700);
+	line(1,0,57,127,57);
+	
+	small_delay(700);
+
 }
 
 

@@ -107,7 +107,7 @@ void uart_intfc_init( void )
   tx1_head = tx1_buff;
   tx1_tail = tx1_buff;
   tx0_head = tx0_buff;
-  tx0_tail = tx0_buff;  
+  tx0_tail = tx0_buff;
 
   uart_init( ); /* initialize the uart for operations */
   uart_rx_message( rx_handler ); /* enable us to receive uart data */
@@ -158,19 +158,19 @@ int buffer_free_space( unsigned char* head, unsigned char* tail )
 int buffer_used_space( unsigned char* head, unsigned char* tail )
   {
   ptrdiff_t used;
-  
+
   used = head - tail; /* get used count */
   if( used < 0 ) /* if the pointers were wrapped */
     used += RX_TX_BUFFER_SIZE; /* correct the count */
-  
+
   return used; /* return used count */
   }
 
 /******************************************************************************
  * @fn          push_buffer
  *
- * @brief       Pushes bytes of data onto the specified buffer. Assumes on 
- *              entry that <data>, <buff>, <tail>, and <head> are all valid 
+ * @brief       Pushes bytes of data onto the specified buffer. Assumes on
+ *              entry that <data>, <buff>, <tail>, and <head> are all valid
  *              pointers
  *
  * input parameters
@@ -194,31 +194,31 @@ bool push_buffer( unsigned char** head, unsigned char* tail,
   unsigned char* local_tail = tail;
 
   BSP_CRITICAL_STATEMENT( local_head = *head );
-  
+
   /* if no room in the buffer */
   if( buffer_free_space( local_head, local_tail ) < len )
     return false; /* indicate failure to enqueue message */
-  
+
   /* there is room for the data, put in the buffer */
-  
+
   do /* put the data in the buffer */
     {
     if( local_head == buff + RX_TX_BUFFER_SIZE ) /* if wrapping around */
       local_head = buff; /* reset pointer */
-    
+
     *local_head++ = *data++; /* copy over this byte of data */
     } while( --len > 0 ); /* copy all the data to the buffer */
-  
+
   BSP_CRITICAL_STATEMENT( *head = local_head ); /* update reference value */
-  
+
   return true;
   }
 
 /******************************************************************************
  * @fn          pop_buffer
  *
- * @brief       Pops the specified number of bytes off of the specified buffer. 
- *              Assumes on entry that <data>, <buff>, <tail>, and <head> are 
+ * @brief       Pops the specified number of bytes off of the specified buffer.
+ *              Assumes on entry that <data>, <buff>, <tail>, and <head> are
  *              all valid pointers.
  *
  * input parameters
@@ -241,36 +241,36 @@ int pop_buffer( unsigned char* head, unsigned char** tail,
   int cnt = 0;
 
   BSP_CRITICAL_STATEMENT( local_tail = *tail );
-  
+
   /* if the buffer is empty or no data requested */
   if( local_tail == local_head || max_len <= 0 )
     return 0; /* indicate so */
-  
+
   do /* retrieve the data from the buffer */
     {
     if( local_tail == buff + RX_TX_BUFFER_SIZE ) /* if wrapping around */
       local_tail = buff; /* reset pointer */
-    
+
     *data++ = *local_tail++; /* copy data from buffer */
-      
+
     /* while the user needs more data and there is data left in the fifo */
     } while( ++cnt < max_len && local_tail != local_head );
-    
+
   BSP_CRITICAL_STATEMENT( *tail = local_tail ); /* update reference value */
-  
+
   return cnt; /* return number of characters retrieved from the buffer */
   }
 
 /******************************************************************************
  * @fn          tx1_send_wait
  *
- * @brief       Enqueue's the message bointed to by <data> which is of length 
- *              <len> and initiates its transfer across the UART.  This is a 
- *              blocking function in that if the transmit fifo doesn't have 
- *              enough room to enqueue the data in its entirety it will push 
- *              the data out a piece at a time as the room in the FIFO becomes 
- *              available.  The function returns true upon completion of moving 
- *              all the data into the FIFO and false if either a NULL pointer 
+ * @brief       Enqueue's the message bointed to by <data> which is of length
+ *              <len> and initiates its transfer across the UART.  This is a
+ *              blocking function in that if the transmit fifo doesn't have
+ *              enough room to enqueue the data in its entirety it will push
+ *              the data out a piece at a time as the room in the FIFO becomes
+ *              available.  The function returns true upon completion of moving
+ *              all the data into the FIFO and false if either a NULL pointer
  *              or a length of zero was passed.
  *
  * input parameters
@@ -304,20 +304,20 @@ bool tx1_send_wait( const void* data, size_t len )
         len -= sz;              /* adjust the count of remaining data to send */
         }
       }
-    
+
     return true; /* indicate success */
     }
-  
+
   return false; /* otherwise indicate failure */
   }
 
 /******************************************************************************
  * @fn          tx1_send
  *
- * @brief       Enqueue's the message pointed to by <data> which is of length 
- *              <len> and initiates its transfer across the uart.  true is 
- *              returned if there was space in the FIFO to send the data, false 
- *              if the FIFO didn't have enough free space to enqueue the data. 
+ * @brief       Enqueue's the message pointed to by <data> which is of length
+ *              <len> and initiates its transfer across the uart.  true is
+ *              returned if there was space in the FIFO to send the data, false
+ *              if the FIFO didn't have enough free space to enqueue the data.
  *
  * input parameters
  * @param   data       - pointer to data to be sent
@@ -331,10 +331,10 @@ bool tx1_send_wait( const void* data, size_t len )
  */
 
 bool tx1_send( const void* data, size_t len )
-  {
+{
   bool status;
   unsigned char* tail;
-  
+
   /* get current state of tail pointer */
   BSP_CRITICAL_STATEMENT( tail = tx1_tail );
 
@@ -343,14 +343,14 @@ bool tx1_send( const void* data, size_t len )
 
   if( status != false ) /* if data was put in the buffer properly */
     uart1_tx_message( tx1_handler ); /* notify the irq that data is ready to send */
-  
+
   return status; /* return status */
   }
 
 /******************************************************************************
  * @fn          tx1_peek
  *
- * @brief       Returns the number of bytes of free space in the transmit FIFO. 
+ * @brief       Returns the number of bytes of free space in the transmit FIFO.
  *
  * input parameters
  *
@@ -363,9 +363,9 @@ int tx1_peek( void )
   {
   unsigned char* head;
   unsigned char* tail;
-  
+
   BSP_CRITICAL_STATEMENT( head = tx1_head; tail = tx1_tail );
-  
+
   return buffer_free_space( head, tail );
   }
 
@@ -373,7 +373,7 @@ int tx1_peek( void )
  * @fn          rx_peek
  *
  * @brief       Returns the number of bytes currently available to be read from
- *              the receive FIFO. 
+ *              the receive FIFO.
  *
  * input parameters
  *
@@ -386,9 +386,9 @@ int rx_peek( void )
   {
   unsigned char* head;
   unsigned char* tail;
-  
+
   BSP_CRITICAL_STATEMENT( head = rx_head; tail = rx_tail );
-  
+
   return buffer_used_space( head, tail );
   }
 
@@ -396,9 +396,9 @@ int rx_peek( void )
  * @fn          rx_receive
  *
  * @brief       Fills in the buffer <data> with data from the receive FIFO until
- *              either <max_len> bytes have been transferred into <data> or the 
- *              receive queue is emptied.  The actual number of bytes put into 
- *              <data> is returned. 
+ *              either <max_len> bytes have been transferred into <data> or the
+ *              receive queue is emptied.  The actual number of bytes put into
+ *              <data> is returned.
  *
  * input parameters
  * @param   data           - pointer to data to be sent
@@ -415,10 +415,10 @@ int rx_receive( void* data, int max_len )
   {
   int cnt;
   unsigned char* head;
-  
+
   /* get current state of head pointer */
   BSP_CRITICAL_STATEMENT( head = rx_head );
-  
+
   /* retrieve data from buffer */
   cnt = pop_buffer( head, &rx_tail, rx_buff, data, max_len );
 
@@ -434,8 +434,8 @@ int rx_receive( void* data, int max_len )
 /******************************************************************************
  * @fn          uart_busy
  *
- * @brief       Returns true if there are characters in the receive FIFO or 
- *              transmit buffer and returns false if both FIFOs are empty. 
+ * @brief       Returns true if there are characters in the receive FIFO or
+ *              transmit buffer and returns false if both FIFOs are empty.
  *
  * input parameters
  *
@@ -451,22 +451,22 @@ bool uart_busy( void )
   int cnt;
   unsigned char* head;
   unsigned char* tail;
-  
+
   /* get receive buffer count */
   BSP_CRITICAL_STATEMENT( head = rx_head; tail = rx_tail );
   cnt = buffer_used_space( head, tail );
-  
+
   /* get transmit buffer count */
   BSP_CRITICAL_STATEMENT( head = tx1_head; tail = tx1_tail );
   cnt += buffer_used_space( head, tail );
-  
+
   return ( ( cnt == 0 ) ? false : true ); /* return status of uart */
   }
 
 /******************************************************************************
  * @fn          tx1_handler
  *
- * @brief       Called by UART transmit interrupt service routine. Pops a byte 
+ * @brief       Called by UART transmit interrupt service routine. Pops a byte
  *              off of the transmit FIFO and stores in <c>. The UART
  *              interrupt service routine will transmit the byte in <c> after
  *              calling this function. Returns true if there is still data left
@@ -492,17 +492,17 @@ bool tx1_handler( unsigned char* c )
 
   /* get data off of the transmit buffer */
   pop_buffer( head, &tx1_tail, tx1_buff, c, 1 );
-  
+
   /* check status of buffer */
   BSP_CRITICAL_STATEMENT( status = tx1_head != tx1_tail );
-  
+
   return status; /* indicate if this is the last byte in the buffer */
   }
 
 /******************************************************************************
  * @fn          rx_handler
  *
- * @brief       Called by UART receive interrupt service routine. Pushes byte 
+ * @brief       Called by UART receive interrupt service routine. Pushes byte
  *              <c> into the receive FIFO <c>.
  *
  * input parameters
@@ -519,7 +519,7 @@ bool rx_handler( unsigned char c )
 
   /* get current state of tail pointer */
   BSP_CRITICAL_STATEMENT( tail = rx_tail );
-  
+
   /* put data onto the receive buffer */
   push_buffer( &rx_head, tail, rx_buff, &c, 1 );
 
@@ -528,7 +528,7 @@ bool rx_handler( unsigned char c )
   if( rx_peek( ) >= RX_TX_BUFFER_THROTTLE_LIMIT )
     UART_ASSERT_RTS( UART_RTS_ASSERTED ); /* assert the RTS line */
 #endif
-  
+
   return true; /* always accept data received from the uart */
   }
 
@@ -536,10 +536,10 @@ bool rx_handler( unsigned char c )
 /******************************************************************************
  * @fn          tx_send
  *
- * @brief       Enqueue's the message pointed to by <data> which is of length 
- *              <len> and initiates its transfer across the uart.  true is 
- *              returned if there was space in the FIFO to send the data, false 
- *              if the FIFO didn't have enough free space to enqueue the data. 
+ * @brief       Enqueue's the message pointed to by <data> which is of length
+ *              <len> and initiates its transfer across the uart.  true is
+ *              returned if there was space in the FIFO to send the data, false
+ *              if the FIFO didn't have enough free space to enqueue the data.
  *
  * input parameters
  * @param   data       - pointer to data to be sent
@@ -556,7 +556,7 @@ bool tx0_send( const void* data, size_t len )
   {
   bool status;
   unsigned char* tail;
-  
+
   /* get current state of tail pointer */
   BSP_CRITICAL_STATEMENT( tail = tx0_tail );
 
@@ -565,7 +565,7 @@ bool tx0_send( const void* data, size_t len )
 
   if( status != false ) /* if data was put in the buffer properly */
     uart0_tx_message( tx0_handler ); /* notify the irq that data is ready to send */
-  
+
   return status; /* return status */
   }
 
@@ -573,13 +573,13 @@ bool tx0_send( const void* data, size_t len )
 /******************************************************************************
  * @fn          tx_send_wait
  *
- * @brief       Enqueue's the message bointed to by <data> which is of length 
- *              <len> and initiates its transfer across the UART.  This is a 
- *              blocking function in that if the transmit fifo doesn't have 
- *              enough room to enqueue the data in its entirety it will push 
- *              the data out a piece at a time as the room in the FIFO becomes 
- *              available.  The function returns true upon completion of moving 
- *              all the data into the FIFO and false if either a NULL pointer 
+ * @brief       Enqueue's the message bointed to by <data> which is of length
+ *              <len> and initiates its transfer across the UART.  This is a
+ *              blocking function in that if the transmit fifo doesn't have
+ *              enough room to enqueue the data in its entirety it will push
+ *              the data out a piece at a time as the room in the FIFO becomes
+ *              available.  The function returns true upon completion of moving
+ *              all the data into the FIFO and false if either a NULL pointer
  *              or a length of zero was passed.
  *
  * input parameters
@@ -613,10 +613,10 @@ bool tx0_send_wait( const void* data, size_t len )
         len -= sz;              /* adjust the count of remaining data to send */
         }
       }
-    
+
     return true; /* indicate success */
     }
-  
+
   return false; /* otherwise indicate failure */
   }
 
@@ -624,7 +624,7 @@ bool tx0_send_wait( const void* data, size_t len )
 /******************************************************************************
  * @fn          tx_peek
  *
- * @brief       Returns the number of bytes of free space in the transmit FIFO. 
+ * @brief       Returns the number of bytes of free space in the transmit FIFO.
  *
  * input parameters
  *
@@ -637,16 +637,16 @@ int tx0_peek( void )
   {
   unsigned char* head;
   unsigned char* tail;
-  
+
   BSP_CRITICAL_STATEMENT( head = tx0_head; tail = tx0_tail );
-  
+
   return buffer_free_space( head, tail );
   }
 
 /******************************************************************************
  * @fn          tx_handler
  *
- * @brief       Called by UART transmit interrupt service routine. Pops a byte 
+ * @brief       Called by UART transmit interrupt service routine. Pops a byte
  *              off of the transmit FIFO and stores in <c>. The UART
  *              interrupt service routine will transmit the byte in <c> after
  *              calling this function. Returns true if there is still data left
@@ -672,9 +672,9 @@ bool tx0_handler( unsigned char* c )
 
   /* get data off of the transmit buffer */
   pop_buffer( head, &tx0_tail, tx0_buff, c, 1 );
-  
+
   /* check status of buffer */
   BSP_CRITICAL_STATEMENT( status = tx0_head != tx0_tail );
-  
+
   return status; /* indicate if this is the last byte in the buffer */
   }

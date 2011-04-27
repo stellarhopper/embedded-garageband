@@ -15,80 +15,79 @@
 
 #include "App_RF.h"
 
-
-/***********************************************************************************
-* CONSTANTS
-*/
-
-
-
-/***********************************************************************************
-* LOCAL VARIABLES
-*/
 static basicRfCfg_t basicRfConfig;
 
-
-/***********************************************************************************
-* LOCAL FUNCTIONS
-*/
-
-
-
-
-void Init_AppRF(unsigned char Dev_Option)
+void Init_AppRF()
 {
-          // Config basicRF
+    // Config basicRF
     basicRfConfig.panId = PAN_ID;
     basicRfConfig.channel = RF_CHANNEL;
     basicRfConfig.ackRequest = TRUE;
-    
-    
-  if(Dev_Option == RF_RX)
-  {
-      // Initialize BasicRF
-    basicRfConfig.myAddr = BLIND_NODE_ADDR;
-    if(basicRfInit(&basicRfConfig)==FAILED) {
+		basicRfConfig.myAddr = M1ADDR;
+		
+		// Initialize BasicRF
+		if(basicRfInit(&basicRfConfig)==FAILED) {
       HAL_ASSERT(FALSE);
     }
-    
-    basicRfReceiveOn();
-  }
-  else if(Dev_Option == RF_TX)
-  {
-        // Initialize BasicRF
-    basicRfConfig.myAddr = REF_NODE_ADDR;
-    if(basicRfInit(&basicRfConfig)==FAILED) {
-      HAL_ASSERT(FALSE);
-    }
-    
-    // Set TX output power
-    halRfSetTxPower(1);
+		
+		basicRfReceiveOn();
 
-    // Keep Receiver off when not needed to save power
-    basicRfReceiveOff();
-  }
+
+//  if(Dev_Option == RF_RX)
+//  {
+//      // Initialize BasicRF
+//    basicRfConfig.myAddr = BLIND_NODE_ADDR;
+//    if(basicRfInit(&basicRfConfig)==FAILED) {
+//      HAL_ASSERT(FALSE);
+//    }
+//
+//    basicRfReceiveOn();
+//  }
+//  else if(Dev_Option == RF_TX)
+//  {
+//        // Initialize BasicRF
+//    basicRfConfig.myAddr = REF_NODE_ADDR;
+//    if(basicRfInit(&basicRfConfig)==FAILED) {
+//      HAL_ASSERT(FALSE);
+//    }
+//
+//    // Set TX output power
+//    halRfSetTxPower(1);
+//
+//    // Keep Receiver off when not needed to save power
+//    basicRfReceiveOff();
+//  }
 }
-
-
 
 bool RF_Send(unsigned char *bufptr, unsigned int len)
 {
-  for(uint8 i = 0; i<5; i++)
-    if(basicRfSendPacket(BLIND_NODE_ADDR, bufptr, len) == SUCCESS)  return true;
-  
+	basicRfReceiveOff();
+  for(uint8 i = 0; i<5; i++) {
+    if(basicRfSendPacket(M2ADDR, bufptr, len) == SUCCESS)  {
+			basicRfReceiveOn();
+			return true;
+		}
+	}
+	basicRfReceiveOn();
   return false;
 }
-
-
 
 bool RF_Peek()
 {
   return basicRfPacketIsReady();
 }
 
-
-
 uint8 RF_Receive(unsigned char *bufptr)
 {
   return basicRfReceive(bufptr, 255, NULL);
+}
+
+uint8 RF_gets_blk(unsigned char *bufptr) {
+
+  while (!RF_Peek());	//block
+  return RF_Receive(bufptr);	
+}
+
+bool RF_puts(unsigned char *bufptr) {
+  return RF_Send(bufptr, strlen((const char*)bufptr));
 }
