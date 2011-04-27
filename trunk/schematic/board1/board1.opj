@@ -24,23 +24,23 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 25 1075 25 372")
-        (Scroll "37 65")
-        (Zoom "128")
-        (Occurrence "/"))
-      (Path "C:\USERS\MAULIK\DESKTOP\ESD_PROJECT\SCHEMATIC\BOARD1\BOARD1.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE2"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1125 75 422")
-        (Scroll "-16 0")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1150 75 379")
+        (Scroll "-28 313")
         (Zoom "100")
         (Occurrence "/"))
       (Path "C:\USERS\MAULIK\DESKTOP\ESD_PROJECT\SCHEMATIC\BOARD1\BOARD1.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1")))
+      (Page "PAGE1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 100 1175 100 404")
+        (Scroll "-99 313")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\MAULIK\DESKTOP\ESD_PROJECT\SCHEMATIC\BOARD1\BOARD1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE2")))
   (PartMRUSelector
     (CAPACITOR
       (FullPartName "CAPACITOR.Normal")
