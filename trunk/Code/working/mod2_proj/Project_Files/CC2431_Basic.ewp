@@ -160,7 +160,7 @@
         </option>
         <option>
           <name>RTLibraryPath</name>
-          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-blxd-1e16x01.r51</state>
+          <state>$TOOLKIT_DIR$\LIB\CLIB\cl-pli-blxc-1e16x01.r51</state>
         </option>
         <option>
           <name>Input variant</name>
@@ -2062,6 +2062,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\user_interface.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\user_interface.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\App_Layer\utilMisc.c</name>

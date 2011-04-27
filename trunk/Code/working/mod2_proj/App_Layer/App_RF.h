@@ -18,6 +18,7 @@
 
 #define M1ADDR					      0xBEEF
 #define M2ADDR         				0x2520
+#define M3ADDR         				0x5050
 #define LOGGER_ADDR           0x1234
 
 #define RF_TX  1
@@ -54,5 +55,6 @@ bool RF_Peek();
 uint8 RF_Receive(unsigned char *bufptr);
 uint8 RF_gets_blk(unsigned char *bufptr);
 bool RF_puts(unsigned char *bufptr);
+bool RF_puts_SD (unsigned char *bufptr, unsigned int len);
 
 #endif

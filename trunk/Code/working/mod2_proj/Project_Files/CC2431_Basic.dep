@@ -2,86 +2,113 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1845486602</fileChecksum>
+  <fileChecksum>4258567712</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
-      <file>$PROJ_DIR$\..\Common\pp_utils.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\drum_map.r51</file>
-      <file>$PROJ_DIR$\..\App_Layer\drum_map.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\kb.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\basic_rf_security.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_led.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\basic_rf_security.r51</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_rf.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_rf_security.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\util_buffer.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\TouchScreen.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_assert.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_board.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_led.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\util_buffer.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_int.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_SPI.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\mmc.r51</file>
-      <file>$PROJ_DIR$\Debug\Exe\CC2431_Basic.d51</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_timer_32k.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\uart.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\Main.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\util_buffer.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2430.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_led.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\TimerManager.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\graphics_lcd.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_button.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_button.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\App_RF.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\util.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_SPI.pbi</file>
       <file>$PROJ_DIR$\..\Drivers\hal_digio.h</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_digio.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\basic_rf.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2430.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart.r51</file>
       <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2431F128_banked.xcl</file>
-      <file>$PROJ_DIR$\Debug\Obj\CC2431_Basic.pbd</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_mcu.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdlib.h</file>
       <file>$TOOLKIT_DIR$\lib\clib\cl-pli-blxd-1e16x01.r51</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stddef.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\adc.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\util.r51</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2431.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\stdbool.h</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_digio.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\user_interface.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_digio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart_intfc.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdlib.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\mmc.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_assert.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\midi.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\key_map.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\App_RF.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_assert.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_board.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_rf_security.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\uart.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\uart_intfc.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\basic_rf.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\Drum.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_digio.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_int.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_rf.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\basic_rf_security.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_rf.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Main.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\util_buffer.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\CC2431_Basic.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_mcu.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\Main.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_rf_security.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\user_interface.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\drum_map.r51</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_timer_32k.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\utilMisc.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\clock.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\midi.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\graphics_lcd.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\kb.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\clib\math.h</file>
-      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_digio.r51</file>
-      <file>$PROJ_DIR$\Debug\Obj\uart_intfc.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\mmc.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\TouchScreen.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\adc.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\clock.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\hal_digio.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\key_map.r51</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stddef.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_led.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\App_RF.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\drum_map.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\kb.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\kb.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\basic_rf_security.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdbool.h</file>
+      <file>$PROJ_DIR$\..\Common\pp_utils.h</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_board.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\hal_mcu.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart_intfc.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\math.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\basic_rf.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\Drum.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_rf_security.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\TimerManager.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_button.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\key_map.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\utilMisc.r51</file>
+      <file>$PROJ_DIR$\..\App_Layer\drum_map.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\TimerManager.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\graphics_lcd.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\graphics_lcd.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\App_RF.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\util.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\basic_rf.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\string.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_button.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\util.r51</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2431.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\hal_SPI.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\mmc.r51</file>
+      <file>$PROJ_DIR$\Debug\Exe\CC2431_Basic.d51</file>
       <file>$PROJ_DIR$\Debug\Obj\Drum.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart.pbi</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_rf.h</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_rf_security.c</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_rf_security.h</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_SPI.c</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_SPI.h</file>
+      <file>$PROJ_DIR$\..\Drivers\kb.c</file>
+      <file>$PROJ_DIR$\..\Drivers\kb.h</file>
+      <file>$PROJ_DIR$\..\Drivers\midi.c</file>
+      <file>$PROJ_DIR$\..\Drivers\midi.h</file>
+      <file>$PROJ_DIR$\..\Drivers\scancodes.h</file>
+      <file>$PROJ_DIR$\..\Drivers\uart.c</file>
+      <file>$PROJ_DIR$\..\Drivers\uart.h</file>
+      <file>$PROJ_DIR$\..\Drivers\uart_intfc.c</file>
+      <file>$PROJ_DIR$\..\Drivers\uart_intfc.h</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf.c</file>
+      <file>$PROJ_DIR$\..\App_Layer\key_map.h</file>
+      <file>$PROJ_DIR$\..\App_Layer\Main.c</file>
+      <file>$PROJ_DIR$\..\App_Layer\user_interface.c</file>
+      <file>$PROJ_DIR$\..\App_Layer\Drum.c</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf.h</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf_security.c</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf_security.h</file>
       <file>$PROJ_DIR$\..\Interface\hal_assert.c</file>
       <file>$PROJ_DIR$\..\Interface\hal_assert.h</file>
       <file>$PROJ_DIR$\..\Interface\hal_board.c</file>
@@ -95,26 +122,20 @@
       <file>$PROJ_DIR$\..\Interface\mmc.h</file>
       <file>$PROJ_DIR$\..\Interface\TimerManager.c</file>
       <file>$PROJ_DIR$\..\Interface\TimerManager.h</file>
+      <file>$PROJ_DIR$\..\App_Layer\App_RF.h</file>
       <file>$PROJ_DIR$\..\Interface\TouchScreen.c</file>
       <file>$PROJ_DIR$\..\Interface\TouchScreen.h</file>
       <file>$PROJ_DIR$\..\Interface\util.c</file>
-      <file>$PROJ_DIR$\..\App_Layer\Drum.c</file>
-      <file>$PROJ_DIR$\..\App_Layer\App_RF.h</file>
-      <file>$PROJ_DIR$\..\App_Layer\key_map.h</file>
-      <file>$PROJ_DIR$\..\App_Layer\Main.c</file>
-      <file>$PROJ_DIR$\..\Common\hal_cc8051.h</file>
-      <file>$PROJ_DIR$\..\Common\hal_defs.h</file>
+      <file>$PROJ_DIR$\..\Interface\util.h</file>
+      <file>$PROJ_DIR$\..\Interface\util_buffer.c</file>
+      <file>$PROJ_DIR$\..\Interface\util_buffer.h</file>
+      <file>$PROJ_DIR$\..\Project.h</file>
+      <file>$PROJ_DIR$\..\App_Layer\App_RF.c</file>
       <file>$PROJ_DIR$\..\Common\hal_types.h</file>
       <file>$PROJ_DIR$\..\Drivers\adc.c</file>
       <file>$PROJ_DIR$\..\Drivers\adc.h</file>
       <file>$PROJ_DIR$\..\Drivers\clock.c</file>
       <file>$PROJ_DIR$\..\Drivers\clock.h</file>
-      <file>$PROJ_DIR$\..\Interface\util.h</file>
-      <file>$PROJ_DIR$\..\Interface\util_buffer.c</file>
-      <file>$PROJ_DIR$\..\Interface\util_buffer.h</file>
-      <file>$PROJ_DIR$\..\Project.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\utilMisc.r51</file>
-      <file>$PROJ_DIR$\..\App_Layer\App_RF.c</file>
       <file>$PROJ_DIR$\..\Drivers\graphics_lcd.c</file>
       <file>$PROJ_DIR$\..\Drivers\graphics_lcd.h</file>
       <file>$PROJ_DIR$\..\Drivers\hal_int.c</file>
@@ -122,198 +143,29 @@
       <file>$PROJ_DIR$\..\Drivers\hal_mcu.c</file>
       <file>$PROJ_DIR$\..\Drivers\hal_mcu.h</file>
       <file>$PROJ_DIR$\..\Drivers\hal_rf.c</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_rf.h</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_rf_security.c</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_rf_security.h</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_SPI.c</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_SPI.h</file>
-      <file>$PROJ_DIR$\..\Drivers\midi.c</file>
-      <file>$PROJ_DIR$\..\Drivers\midi.h</file>
-      <file>$PROJ_DIR$\..\Drivers\uart.c</file>
-      <file>$PROJ_DIR$\..\Drivers\uart.h</file>
-      <file>$PROJ_DIR$\..\Drivers\uart_intfc.c</file>
-      <file>$PROJ_DIR$\..\Drivers\uart_intfc.h</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf.c</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf.h</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf_security.c</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf_security.h</file>
+      <file>$PROJ_DIR$\..\App_Layer\user_interface.h</file>
+      <file>$PROJ_DIR$\..\App_Layer\utilMisc.c</file>
+      <file>$PROJ_DIR$\..\App_Layer\utilMisc.h</file>
+      <file>$PROJ_DIR$\..\Common\hal_cc8051.h</file>
+      <file>$PROJ_DIR$\..\Common\hal_defs.h</file>
       <file>$PROJ_DIR$\..\App_Layer\Drum.h</file>
       <file>$PROJ_DIR$\..\App_Layer\key_map.c</file>
-      <file>$PROJ_DIR$\..\App_Layer\drum_map.c</file>
-      <file>$PROJ_DIR$\Debug\Obj\drum_map.pbi</file>
-      <file>$PROJ_DIR$\..\App_Layer\utilMisc.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\utilMisc.pbi</file>
-      <file>$PROJ_DIR$\..\Drivers\kb.c</file>
-      <file>$PROJ_DIR$\..\App_Layer\utilMisc.c</file>
-      <file>$PROJ_DIR$\..\Drivers\scancodes.h</file>
-      <file>$PROJ_DIR$\..\Drivers\kb.h</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 18</file>
+          <file> 78</file>
         </tool>
       </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Exe\CC2431_Basic.d51</name>
-      <inputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 35 29 55 21 25 67 68 54 8 58 26 16 49 50 27 56 7 73 57 51 4 71 46 17 52 53 42 107 13 39</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Drivers\hal_digio.c</name>
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 64</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 70</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 44 97 79 23 43 96 114 112 32 77</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Obj\CC2431_Basic.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 48 75 11 74 14 41 34 5 69 60 31 45 72 28 15 24 37 10 12 61 47 59 66 20 65 30 136 22</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\hal_assert.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 45</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 77 97 84 98 44 114</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\hal_board.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 50</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 72</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 79 23 43 96 98 44 97 114 81 112</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\hal_button.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 27</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 28</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 44 79 23 43 96 97 114 81</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\hal_led.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 7</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 24</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 44 84 79 23 43 96 97 114</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\mmc.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 17</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 66</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 86 120 79 23 43 96 98 44 97 114 62 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\TimerManager.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 25</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 74</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 44 97 102 79 23 43 96 114 112 77 124 40 63 1 88</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\TouchScreen.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 67</file>
+          <file> 21</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -323,366 +175,16 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 23 90 97 98 44 100 126 40 63 124 1 84 96 114 94 9 6 0</file>
+          <file> 125 50 141 106 8 75 140 135 133 7 104</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\util.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 42</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 30</file>
-        </tool>
-      </outputs>
+      <name>$PROJ_DIR$\Debug\Obj\CC2431_Basic.pbd</name>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 103 98 44 97 116</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App_Layer\Drum.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 55</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 75</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84 98 44 77 97 79 23 43 96 114 112 126 40 63 124 1 9 6 0 38 88 131 122</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 21</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84 98 44 77 97 79 23 43 96 114 112 81 116 128 126 40 63 124 1 90 86 9 6 0 38 120 88 131 122 110 94 93 135</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\adc.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 68</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 41</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 100 98 44 97 43 23</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\clock.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 58</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 69</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 102 98 44 114 23</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\util_buffer.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 13</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 22</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 105 98 44 79 23 43 96 97 114 112 77</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App_Layer\App_RF.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 29 55 21 71 107 68 58 26 16 56 73 57 51 4 46 52 53 25 67 54 8 49 50 27 7 17 42 13</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 48</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 84 98 44 77 97 79 23 43 96 114 112 81 116 128 19 106 9 6 63 0 38 100 102 32 118 130 103 105 90 126 40 124 1 93 92 88 131 122 95 86 120 110 94 135 132 138 99 101 109 119 111 113 115 117 137 140 139 121 123 125 87 89 127 129 76 78 80 83 85 62 91 104</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84 98 44 77 97 79 23 43 96 114 112 81 116 128 19 106 9 6 63 0 38 100 102 32 118 130 103 105 90 126 40 124 1 93</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\graphics_lcd.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 26</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 60</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23 126 40 63 124 44 1 84 98 96 97 114 110</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_int.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 56</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 15</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 44 97 112 79 23 43 96 114</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_mcu.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 73</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 37</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 98 44 114 43 23 102</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_rf.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 57</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 79 23 43 96 98 44 97 114 112 77 103 116 0 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_rf_security.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 51</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 12</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 106 43 23 9 6 63 0 38 100 98 44 97 102 32 112 114 116 118 19 128 130 77 79 96 81 84 103 105 90</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_SPI.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 16</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 31</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 120 79 23 43 96 98 44 97 114</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\midi.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 46</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 59</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 23 126 40 63 124 44 1 84 98 96 97 114 122</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\uart.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 52</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 20</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 124 44 40 63 23 1</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\uart_intfc.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 53</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 65</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 126 40 63 124 44 23 1 38</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\basic_rf.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 54</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 34</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 112 98 44 114 116 128 97 103 0 63</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\basic_rf_security.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 8</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
-        </tool>
-      </outputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App_Layer\key_map.c</name>
-      <outputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 71</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 47</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 84 98 44 77 97 79 23 43 96 114 112 94 126 40 63 124 1</file>
+          <name>BILINK</name>
+          <file> 45 79 32 59 0 73 70 49 42 67 6 18 52 72 5 44 31 27 33 47 20 39 17 80 54 34 69 37 29</file>
         </tool>
       </inputs>
     </file>
@@ -691,17 +193,56 @@
       <outputs>
         <tool>
           <name>ICC8051</name>
-          <file> 2</file>
+          <file> 35</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 134</file>
+          <file> 46</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 84 98 44 77 97 79 23 43 96 114 112 94 126 40 63 124 1</file>
+          <file> 111 125 50 104 141 106 8 75 140 135 133 96 94 43 60 92 51</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\CC2431_Basic.d51</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 10 68 57 28 65 40 41 56 25 38 66 76 1 2 61 22 3 53 23 58 48 62 19 77 9 15 13 74 63 4 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_rf_security.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 123 75 8 26 24 60 71 16 127 125 50 141 129 7 133 135 81 83 36 100 102 104 106 140 108 111 120 122 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_SPI.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 85 106 8 75 140 125 50 141 135</file>
         </tool>
       </inputs>
     </file>
@@ -709,18 +250,376 @@
       <name>$PROJ_DIR$\..\Drivers\kb.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 4</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 61</file>
+          <file> 47</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 140 98 44 97 79 23 43 96 114 112 77 139 126 40 63 124 1</file>
+          <file> 87 125 50 141 106 8 75 140 135 133 104 90 94 43 60 92 51</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\midi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 94 43 60 92 50 51 111 125 140 141 135 89 137 139 116</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 80</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 92 50 43 60 8 51</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\uart_intfc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 54</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94 43 60 92 50 8 51 16</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\basic_rf.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 70</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 133 125 50 135 81 100 141 120 71 60</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111 125 50 104 141 106 8 75 140 135 133 108 81 100 94 43 60 92 51 118 113 26 24 71 16 85 115 142 89 131 96 116 139 137</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\user_interface.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 139 141 125 50 106 8 75 140 135 26 24 60 71 16 137</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\Drum.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111 125 50 104 141 106 8 75 140 135 133 94 43 60 92 51 26 24 71 16 115 142 89</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\basic_rf_security.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_assert.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 104 141 111 125 50 135</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_board.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 52</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 106 8 75 140 125 50 141 135 108 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_button.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 72</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 50 106 8 75 140 141 135 108</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_led.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 44</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 50 111 106 8 75 140 141 135</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\mmc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 113 85 106 8 75 140 125 50 141 135 55 60</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\TimerManager.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 59</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 50 141 129 106 8 75 140 135 133 104 92 43 60 51 115</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\TouchScreen.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 118 141 125 50 127 94 43 60 92 51 111 140 135 96 26 24 71</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\util.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 120 125 50 141 81</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\util_buffer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 122 125 50 106 8 75 140 141 135 133 104</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\App_RF.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 68 57 28 62 13 63 41 38 66 76 22 53 23 58 48 19 9 15 65 40 56 25 1 2 61 3 77 74 4</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 111 125 50 104 141 106 8 75 140 135 133 108 81 100 36 123 26 24 60 71 16 127 129 7 83 102 120 122 118 94 43 92 51 116 99 115 142 89 97 113 85 131 96 139 137 143 98 138 126 128 130 84 132 134 136 82 86 87 90 88 91 93 114 117 95 101 103 105 107 110 112 55 119 121</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111 125 50 104 141 106 8 75 140 135 133 108 81 100 36 123 26 24 60 71 16 127 129 7 83 102 120 122 118 94 43 92 51 116</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 73</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 127 125 50 141 75 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 129 125 50 135 8</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\graphics_lcd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 94 43 60 92 50 51 111 125 140 141 135 131</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_int.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 50 141 133 106 8 75 140 135</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_mcu.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 125 50 135 75 8 129</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_rf.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 106 8 75 140 125 50 141 135 133 104 120 81 71 60</file>
         </tool>
       </inputs>
     </file>
@@ -728,18 +627,29 @@
       <name>$PROJ_DIR$\..\App_Layer\utilMisc.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 107</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 136</file>
+          <file> 37</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 0 63 79 23 43 96 98 44 97 114 112 126 40 124 1 135</file>
+          <file> 71 60 106 8 75 140 125 50 141 135 133 94 43 92 51 139</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\key_map.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 111 125 50 104 141 106 8 75 140 135 133 96 94 43 60 92 51 139</file>
         </tool>
       </inputs>
     </file>
@@ -747,31 +657,44 @@
   <configuration>
     <name>Release</name>
     <outputs>
-      <file>$PROJ_DIR$\Release\Obj\Main.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\Drum.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\hal_rf.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\hal_board.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\util_buffer.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\basic_rf.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\CC2431_Basic.pbd</file>
-      <file>$PROJ_DIR$\Release\Obj\adc.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\hal_rf_security.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\hal_led.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\hal_button.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\clock.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\uart_intfc.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\TouchScreen.pbi</file>
-      <file>$PROJ_DIR$\Release\Obj\TimerManager.pbi</file>
-      <file>$PROJ_DIR$\Release\Exe\CC2431_Basic.a51</file>
-      <file>$PROJ_DIR$\Release\Obj\util.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\hal_rf_security.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\mmc.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\hal_mcu.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\hal_int.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\hal_SPI.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\uart.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\basic_rf.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\CC2431_Basic.pbd</file>
+      <file>$PROJ_DIR$\Release\Obj\hal_led.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\hal_button.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\adc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\util.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\hal_assert.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\hal_board.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\clock.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\uart_intfc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\hal_rf.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\basic_rf_security.pbi</file>
       <file>$PROJ_DIR$\Release\Obj\basic_rf_security.r51</file>
-      <file>$PROJ_DIR$\Release\Obj\hal_SPI.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\TimerManager.pbi</file>
+      <file>$PROJ_DIR$\Release\Exe\CC2431_Basic.a51</file>
+      <file>$PROJ_DIR$\Release\Obj\Main.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\Drum.pbi</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_rf.h</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_rf_security.c</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_SPI.c</file>
+      <file>$PROJ_DIR$\..\Drivers\hal_SPI.h</file>
+      <file>$PROJ_DIR$\..\Drivers\uart.c</file>
+      <file>$PROJ_DIR$\..\Drivers\uart.h</file>
+      <file>$PROJ_DIR$\..\Drivers\uart_intfc.c</file>
+      <file>$PROJ_DIR$\..\Drivers\uart_intfc.h</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf.c</file>
+      <file>$PROJ_DIR$\..\App_Layer\Main.c</file>
+      <file>$PROJ_DIR$\..\App_Layer\Drum.c</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf.h</file>
+      <file>$PROJ_DIR$\..\Interface\basic_rf_security.c</file>
       <file>$PROJ_DIR$\..\Interface\hal_assert.c</file>
       <file>$PROJ_DIR$\..\Interface\hal_assert.h</file>
       <file>$PROJ_DIR$\..\Interface\hal_board.c</file>
@@ -787,35 +710,22 @@
       <file>$PROJ_DIR$\..\Interface\TouchScreen.c</file>
       <file>$PROJ_DIR$\..\Interface\TouchScreen.h</file>
       <file>$PROJ_DIR$\..\Interface\util.c</file>
-      <file>$PROJ_DIR$\..\App_Layer\Drum.c</file>
-      <file>$PROJ_DIR$\..\App_Layer\Main.c</file>
-      <file>$PROJ_DIR$\..\Common\hal_cc8051.h</file>
-      <file>$PROJ_DIR$\..\Common\hal_defs.h</file>
+      <file>$PROJ_DIR$\..\Interface\util.h</file>
+      <file>$PROJ_DIR$\..\Interface\util_buffer.c</file>
+      <file>$PROJ_DIR$\..\Interface\util_buffer.h</file>
+      <file>$PROJ_DIR$\..\Project.h</file>
       <file>$PROJ_DIR$\..\Common\hal_types.h</file>
       <file>$PROJ_DIR$\..\Drivers\adc.c</file>
       <file>$PROJ_DIR$\..\Drivers\adc.h</file>
       <file>$PROJ_DIR$\..\Drivers\clock.c</file>
       <file>$PROJ_DIR$\..\Drivers\clock.h</file>
-      <file>$PROJ_DIR$\..\Interface\util.h</file>
-      <file>$PROJ_DIR$\..\Interface\util_buffer.c</file>
-      <file>$PROJ_DIR$\..\Interface\util_buffer.h</file>
-      <file>$PROJ_DIR$\..\Project.h</file>
       <file>$PROJ_DIR$\..\Drivers\hal_int.c</file>
       <file>$PROJ_DIR$\..\Drivers\hal_int.h</file>
       <file>$PROJ_DIR$\..\Drivers\hal_mcu.c</file>
       <file>$PROJ_DIR$\..\Drivers\hal_mcu.h</file>
       <file>$PROJ_DIR$\..\Drivers\hal_rf.c</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_rf.h</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_rf_security.c</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_SPI.c</file>
-      <file>$PROJ_DIR$\..\Drivers\hal_SPI.h</file>
-      <file>$PROJ_DIR$\..\Drivers\uart.c</file>
-      <file>$PROJ_DIR$\..\Drivers\uart.h</file>
-      <file>$PROJ_DIR$\..\Drivers\uart_intfc.c</file>
-      <file>$PROJ_DIR$\..\Drivers\uart_intfc.h</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf.c</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf.h</file>
-      <file>$PROJ_DIR$\..\Interface\basic_rf_security.c</file>
+      <file>$PROJ_DIR$\..\Common\hal_cc8051.h</file>
+      <file>$PROJ_DIR$\..\Common\hal_defs.h</file>
       <file>$PROJ_DIR$\..\App_Layer\Drum.h</file>
     </outputs>
     <file>
@@ -823,7 +733,7 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 15</file>
+          <file> 22</file>
         </tool>
       </outputs>
     </file>
@@ -832,35 +742,35 @@
       <inputs>
         <tool>
           <name>BILINK</name>
-          <file> 1 0 14 13 7 5 22 11 24 21 3 10 19 9 18 2 8 17 20 12 16 4</file>
+          <file> 24 23 21 1 12 8 19 16 6 14 15 11 5 10 4 18 2 3 7 17 13 0</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\hal_assert.c</name>
+      <name>$PROJ_DIR$\..\Drivers\hal_rf_security.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21</file>
+          <file> 2</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 26</file>
+          <file> 56</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 26 32</file>
+          <file> 56 57 68 67</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\hal_board.c</name>
+      <name>$PROJ_DIR$\..\Drivers\hal_SPI.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 3</file>
+          <file> 6</file>
         </tool>
       </outputs>
       <inputs>
@@ -870,140 +780,12 @@
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 28 30</file>
+          <file> 28 65</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\hal_button.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 28 30</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\hal_led.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 9</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 28</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\mmc.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 17</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 34 61 28</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 34 61 28</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\TimerManager.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 28 26 36</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\TouchScreen.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 13</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 38 32</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Interface\util.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 16</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 49</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 49</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App_Layer\Drum.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 1</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 69</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 0</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 69</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\adc.c</name>
+      <name>$PROJ_DIR$\..\Drivers\uart.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
@@ -1013,99 +795,35 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 46</file>
+          <file> 30</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 46</file>
+          <file> 30</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Drivers\clock.c</name>
+      <name>$PROJ_DIR$\..\Drivers\uart_intfc.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 11</file>
+          <file> 17</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 48</file>
+          <file> 32</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 48</file>
+          <file> 32 30</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\util_buffer.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 4</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICC8051</name>
-          <file> 51</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 51 28 26</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_int.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 19</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 54</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_mcu.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 18</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 56 48</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_rf.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 2</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 56 54 58</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_rf_security.c</name>
+      <name>$PROJ_DIR$\..\Interface\basic_rf.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
@@ -1114,17 +832,28 @@
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 52</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 52 44 43 42</file>
+          <file> 36 53</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Drivers\hal_SPI.c</name>
+      <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 69</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\Drum.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
@@ -1133,36 +862,181 @@
       </outputs>
       <inputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 61</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 61 56</file>
+          <file> 69</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Drivers\uart.c</name>
+      <name>$PROJ_DIR$\..\Interface\basic_rf_security.c</name>
+      <outputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_assert.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 20</file>
+          <file> 14</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 63</file>
+          <file> 39</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 63</file>
+          <file> 39 45</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Drivers\uart_intfc.c</name>
+      <name>$PROJ_DIR$\..\Interface\hal_board.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_button.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41 43</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\hal_led.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\mmc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 47 28 41</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 47 28 41</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\TimerManager.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41 39 49</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\TouchScreen.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 51 45</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\util.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 13</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 53</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 53</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Interface\util_buffer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 55</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 55 41 39</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\adc.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
@@ -1172,16 +1046,35 @@
       <inputs>
         <tool>
           <name>ICC8051</name>
-          <file> 65</file>
+          <file> 59</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 65 63</file>
+          <file> 59</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\basic_rf.c</name>
+      <name>$PROJ_DIR$\..\Drivers\clock.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC8051</name>
+          <file> 61</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 61</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_int.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
@@ -1191,22 +1084,39 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 67 49</file>
+          <file> 63</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\Interface\basic_rf_security.c</name>
+      <name>$PROJ_DIR$\..\Drivers\hal_mcu.c</name>
       <outputs>
         <tool>
-          <name>ICC8051</name>
-          <file> 23</file>
-        </tool>
-        <tool>
           <name>BICOMP</name>
-          <file> 22</file>
+          <file> 4</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65 61</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Drivers\hal_rf.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 18</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 65 63 25</file>
+        </tool>
+      </inputs>
     </file>
     <forcedrebuild>
       <name>[MULTI_TOOL]</name>

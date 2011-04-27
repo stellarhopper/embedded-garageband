@@ -45,7 +45,7 @@
  *                                UART Settings
  * ------------------------------------------------------------------------------------------------
  */
-#define RX_TX_BUFFER_SIZE  50      /* Size of transmit FIFO and receive FIFO */
+#define RX_TX_BUFFER_SIZE  100      /* Size of transmit FIFO and receive FIFO */
 
 #define UART0_BAUD_RATE    31250
 #define UART1_BAUD_RATE    115200

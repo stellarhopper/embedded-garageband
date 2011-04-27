@@ -24,12 +24,11 @@
 #include "key_map.h"
 #include "App_RF.h"
 #include "utilMisc.h"
+#include "user_interface.h"
 
 #define SZ_RFBUF 50
 
-#define bzero(b,len) (memset((b), '\0', (len)), (void) 0)
-
-enum Numbers {
+enum rfStat {
 	rfHello = 1,
 	rfVPiano,
 	rfVDrum,
@@ -40,71 +39,122 @@ enum Numbers {
 unsigned char rfBuf[SZ_RFBUF] = {0};
 unsigned char Check_Flag = 1;
 
+extern char drum_piano_guitar;
+extern char real_virtual;
+extern char drum_piano_guitar_rv;
+extern char piano_type;
+extern char guitar_type;
+extern char audio_termination;
+extern char record_notes;
+extern char play_recorded_notes;
+
+unsigned char endPacket[3] = {0xFF, 0xFF, 0xFF};
+
 TimerId timerID1 = TimerId_INVALID;
 TimerId timerID2 = TimerId_INVALID;
 
 void App_ISR1(TimerId timerId);
 void App_ISR2(TimerId timerId);
 void midiTest(void);
+void playRfNotes();
+void playRfNotesSD();
 
 
 void main(void)
 {	
-	unsigned char usrExit = 0;
+	unsigned char cmd = 0;
+	char keyNote = 0;
+	char printBuf[50] = {0};
 	
 	// Initalise board peripherals
   halBoardInit();
   uart_intfc_init();
   TimerInterface_Initialize();
 	Init_AppRF();
-	halMcuWaitMs(2000);
+	halMcuWaitMs(1000);
 
-  printf_pc("Init done (M2)\n\r");
-	
-	bzero(rfBuf, SZ_RFBUF);
+  printf_pc("Init done (M2)\n\r");	
+	halMcuWaitMs(1000);
 	
 	RF_puts("HELLO");
-	RF_gets_blk(rfBuf);
-	printf_pc(rfBuf);
+	//RF_gets_blk(rfBuf);
+	//printf_pc(rfBuf);
 	
-	RF_puts("VPIANO");
-	midiReset();
-	midiVolSet(120);
-	//midiBankSet(DRUMS1);
-	//midiPatchSet(5);
-	midiBankSet(MELODY);
-	midiPatchSet(PIANO_ELG);
-	halMcuWaitMs(100);
-	while (1) {
-		//usrExit = getchar() nblocking
-		if (usrExit == 27) {
-			break;
+	while(1) {
+		bzero(rfBuf, SZ_RFBUF);
+		start_my_menu();
+		
+		sprintf(printBuf, "drum_piano_guitar_rv = %d\n\r", drum_piano_guitar_rv);
+		printf_pc(printBuf);
+		
+		if (record_notes == TRUE) {
+			RF_puts_SD("Record_0", 8);
+		}
+		
+		if (play_recorded_notes == TRUE) {
+			printf_pc("Will play recorded notes\n\r");	
+			RF_puts_SD("Play_0", 6);
+			playRfNotesSD();
 		}
 		else {
-			RF_gets_blk(rfBuf);
-			noteOn(rfBuf[0], rfBuf[1], rfBuf[2]);
+			switch (drum_piano_guitar_rv) {
+				case DRUM_REAL_INSTRUMENT:
+					midiInit();
+					break;
+					
+				case PIANO_REAL_INSTRUMENT:
+					printf_pc("PIANO_REAL_INSTRUMENT\n\r");
+					midiInit();
+					while(1) {
+						cmd = getchar_pc();
+						if (cmd == 27) {
+							RF_puts_SD(endPacket, 3);
+							break;
+						}
+						else {
+							keyNote = ps2_key_match(cmd);
+							tx1_send(&keyNote, 1);
+							if (keyNote != 0) {
+								noteOn(0, keyNote, 0x7F);
+							}
+						}
+					}
+					break;
+					
+				case DRUM_VIRTUAL_INSTRUMENT:
+					printf_pc("DRUM_VIRTUAL_INSTRUMENT\n\r");
+					midiInit();
+					RF_puts("VDRUM");
+					RF_gets_blk(rfBuf);
+					printf_pc(rfBuf);
+					playRfNotes();
+					break;
+					
+				case PIANO_VIRTUAL_INSTRUMENT:
+					printf_pc("PIANO_VIRTUAL_INSTRUMENT\n\r");
+					midiInit();
+					RF_puts("VPIANO");
+					RF_gets_blk(rfBuf);
+					printf_pc(rfBuf);
+					playRfNotes();
+					break;
+					
+				case GUITAR_VIRTUAL_INSTRUMENT:
+					printf_pc("GUITAR_VIRTUAL_INSTRUMENT\n\r");
+					midiInit();
+					RF_puts("VGUITAR");
+					RF_gets_blk(rfBuf);
+					printf_pc(rfBuf);
+					playRfNotes();
+					break;
+					
+				default:
+					printf_pc("default\n\r");
+					break;
+			}
 		}
 	}
-	RF_gets_blk(rfBuf);
-	printf_pc(rfBuf);
 	
-	RF_puts("VDRUM");
-	RF_gets_blk(rfBuf);
-	printf_pc(rfBuf);
-	
-	RF_puts("VGUITAR");
-	RF_gets_blk(rfBuf);
-	printf_pc(rfBuf);
-	
-	RF_puts("RPIANO");
-	RF_gets_blk(rfBuf);
-	printf_pc(rfBuf);
-	
-	RF_puts("BADDATA");
-	RF_gets_blk(rfBuf);
-	printf_pc(rfBuf);
-	
-
 //
 //	//DrumSet();
 //	
@@ -114,8 +164,39 @@ void main(void)
 //		noteOn(0, keyNote, 0x3D);
 //		tx1_send(&keyNote, 1);
 //	}
+}
+
+void playRfNotes() {
 	
+	char cmd = 0;
 	
+	while (1) {
+		//TODO usrExit = getchar() nblocking
+		if (cmd == 27) {
+			break;
+		}
+		else {
+			RF_gets_blk(rfBuf);
+			noteOn(rfBuf[0], rfBuf[1], rfBuf[2]);
+		}
+	}
+}
+
+void playRfNotesSD() {
+	
+	char cmd = 0;
+	
+	while (1) {
+		//TODO usrExit = getchar() nblocking
+		if (cmd == 27) {
+			break;
+		}
+		else {
+			RF_gets_blk(rfBuf);
+			tx1_send(rfBuf, 3);
+			talkMIDI(rfBuf[0], rfBuf[1], rfBuf[2]);
+		}
+	}
 }
 
 void midiTest() {
