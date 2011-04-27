@@ -59,7 +59,8 @@ unsigned int x,y;                     // X,Y touch position variables
 
 
 // System Routines
-void TouchScreen(void); 
+void getTsXY(unsigned int *xCoord, unsigned int *yCoord);
+void TouchScreen(void);
 void Initialize_TouchScreen(void);          // Configure modules & control Registers
 void waitForTouch(void);                    // Waits for a touch on the screen
 unsigned int getSamples(unsigned int);      // Get samples from ADC

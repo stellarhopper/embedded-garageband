@@ -2063,6 +2063,18 @@
     <file>
       <name>$PROJ_DIR$\..\App_Layer\Main.c</name>
     </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\piano.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\piano.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\utilMisc.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\App_Layer\utilMisc.h</name>
+    </file>
   </group>
   <group>
     <name>Common</name>
