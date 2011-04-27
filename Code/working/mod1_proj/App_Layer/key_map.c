@@ -187,3 +187,34 @@ char drum_key_match(int x, int y)
     //tx1_send(&key_note, 1);
 	return key_note;
 }
+
+
+char guitar_key_match(int x, int y)
+{
+	char key_note=0;
+	
+	if(ISBETWEEN(xmin,x,xmax) && ISBETWEEN(ymin,y,ymax))	//check if it is in logical range of lcd
+	{
+		if(ISBETWEEN(string1_ymin, y, string1_ymax))	//String 1 Thickest string
+			key_note = 52;
+		else if(ISBETWEEN(string2_ymin, y, string2_ymax))	//String 2
+			key_note = 57;
+		else if(ISBETWEEN(string3_ymin, y, string3_ymax))	//String 3
+			key_note = 62;
+		else if(ISBETWEEN(string4_ymin, y, string4_ymax))	//String 4
+			key_note = 67;
+		else if(ISBETWEEN(string5_ymin, y, string5_ymax))	//String 5
+			key_note = 71;
+		else if(ISBETWEEN(string6_ymin, y, string6_ymax))	//String 6
+			key_note = 76;
+		else
+			key_note=0;
+	
+	}	
+	else	//bound check else
+	{
+		key_note=0;
+	}//end of bound check
+
+	return key_note;
+}
