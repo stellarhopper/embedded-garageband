@@ -31,32 +31,6 @@ void Init_AppRF()
     }
 		
 		basicRfReceiveOn();
-
-
-//  if(Dev_Option == RF_RX)
-//  {
-//      // Initialize BasicRF
-//    basicRfConfig.myAddr = BLIND_NODE_ADDR;
-//    if(basicRfInit(&basicRfConfig)==FAILED) {
-//      HAL_ASSERT(FALSE);
-//    }
-//
-//    basicRfReceiveOn();
-//  }
-//  else if(Dev_Option == RF_TX)
-//  {
-//        // Initialize BasicRF
-//    basicRfConfig.myAddr = REF_NODE_ADDR;
-//    if(basicRfInit(&basicRfConfig)==FAILED) {
-//      HAL_ASSERT(FALSE);
-//    }
-//
-//    // Set TX output power
-//    halRfSetTxPower(1);
-//
-//    // Keep Receiver off when not needed to save power
-//    basicRfReceiveOff();
-//  }
 }
 
 bool RF_Send(unsigned char *bufptr, unsigned int len)
@@ -90,4 +64,16 @@ uint8 RF_gets_blk(unsigned char *bufptr) {
 
 bool RF_puts(unsigned char *bufptr) {
   return RF_Send(bufptr, strlen((const char*)bufptr));
+}
+
+bool RF_puts_SD (unsigned char *bufptr, unsigned int len) {
+	basicRfReceiveOff();
+  for(uint8 i = 0; i<5; i++) {
+    if(basicRfSendPacket(M3ADDR, bufptr, len) == SUCCESS)  {
+			basicRfReceiveOn();
+			return true;
+		}
+	}
+	basicRfReceiveOn();
+  return false;
 }

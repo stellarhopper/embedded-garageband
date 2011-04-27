@@ -5,11 +5,12 @@
 #include <hal_int.h>
 #include "key_map.h"
 #include "uart_intfc.h"
+#include "utilMisc.h"
 
 char piano_key_match(int x, int y)
 {
-	unsigned char BLACK_KEY = TRUE;
-	unsigned char WHITE_KEY = TRUE;
+	volatile unsigned char BLACK_KEY = TRUE;
+	volatile unsigned char WHITE_KEY = TRUE;
 	char key_note=0;
 	char center_note = 0x3C;
 	

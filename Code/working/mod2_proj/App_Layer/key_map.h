@@ -1,6 +1,9 @@
 #ifndef KEY_MAP_H
 #define KEY_MAP_H
 
+#include "hal_defs.h"
+#include "hal_types.h"
+
 #define xmax	4425
 #define xmin	1225
 #define ymax	3594
@@ -102,8 +105,6 @@ char drum_key_match(int x, int y);
 
 //COMMON-------------------------------
 
-
-#define ISBETWEEN(B, A, C) ( ((A-B) >= 0) && ((A-C) <= 0) )
 #define TRUE 1
 #define FALSE 0
 

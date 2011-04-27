@@ -55,6 +55,7 @@ void midiPatchSet(unsigned char instr);
 void midiSilence(void);
 void midiChannelSet(unsigned char chan);
 
+void midiInit(void);
 
 void noteOn(unsigned char channel, unsigned char note, unsigned char attack_velocity);
 void noteOff(unsigned char channel, unsigned char note, unsigned char release_velocity);
