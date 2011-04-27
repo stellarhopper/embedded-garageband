@@ -32,12 +32,11 @@
 
 #define bzero(b,len) (memset((b), '\0', (len)), (void) 0)
 
-enum Numbers {
+enum rfStat {
 	rfHello = 1,
 	rfVPiano,
 	rfVDrum,
-	rfVGuitar,
-	rfRPiano
+	rfVGuitar
 };
 
 unsigned char rfBuf[SZ_RFBUF] = {0};
@@ -75,7 +74,6 @@ void main(void)
 		if (NULL != strstr((const char*)rfBuf, "VPIANO")) rfStatus = rfVPiano;
 		if (NULL != strstr((const char*)rfBuf, "VDRUM")) rfStatus = rfVDrum;
 		if (NULL != strstr((const char*)rfBuf, "VGUITAR")) rfStatus = rfVGuitar;
-		if (NULL != strstr((const char*)rfBuf, "RPIANO")) rfStatus = rfRPiano;
 		
 		switch (rfStatus) {
 			
@@ -98,6 +96,7 @@ void main(void)
 				clear_screen_lcd();						//Clear LCD screen
 				draw_drums();									//Draws Drums
 				RF_puts("ACK");
+				playVDrum();
 				break;
 				
 			case rfVGuitar:
@@ -105,12 +104,7 @@ void main(void)
 				clear_screen_lcd();						//Clear LCD screen
 				draw_guitar();								//Draws Guitar Strings
 				RF_puts("ACK");
-				break;
-				
-			case rfRPiano:
-				printf_pc("In rfRPiano\n\r");
-				//init ps2
-				RF_puts("ACK");
+				playVGuitar();
 				break;
 				
 			default:

@@ -97,10 +97,28 @@
 #define square5_ymin	2629
 #define square5_ymax	3594
 
-char drum_key_match(int x, int y);
+//GUITAR STUFF-----------------
+
+#define string1_ymax	3480
+#define string1_ymin	3253
+
+#define string2_ymax	3168
+#define string2_ymin	2969
+	
+#define string3_ymax	2884
+#define string3_ymin	2685
+
+#define string4_ymax	2572
+#define string4_ymin	2402
+
+#define string5_ymax	2316
+#define string5_ymin	2146
+	
+#define string6_ymax	2061
+#define string6_ymin	1891
 
 
-//COMMON-------------------------------
+
 
 
 #define ISBETWEEN(B, A, C) ( ((A-B) >= 0) && ((A-C) <= 0) )
@@ -109,6 +127,8 @@ char drum_key_match(int x, int y);
 
 char piano_key_match(int x, int y);
 char ps2_key_match(char scancode);
+char drum_key_match(int x, int y);
+char guitar_key_match(int x, int y);
 static const char valid_scancode[19] = {'q','2','w','3','e','4','r','5','t','6','y','7','u','8','i','9','o','0','p'};
 
 #endif

@@ -28,6 +28,7 @@
 void Intitialize_Drumset();
 
 void DrumSet();
+void playVDrum();
 
 
 #endif

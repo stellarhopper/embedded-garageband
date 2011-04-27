@@ -6,5 +6,6 @@
 
 void playVPiano(void);
 void playRPiano(void);
+void playVGuitar(void);
 
 #endif
