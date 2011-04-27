@@ -6,6 +6,8 @@
 #include "key_map.h"
 #include "uart_intfc.h"
 
+//PIANO STUFF-------------------------
+
 char piano_key_match(int x, int y)
 {
 	unsigned char BLACK_KEY = TRUE;
@@ -129,7 +131,7 @@ char piano_key_match(int x, int y)
 		key_note=0;
 	}//end of bound check
 
-        //tx1_send(&key, 1);
+        //tx1_send(&key_note, 1);
 	return key_note;
 }
 
@@ -151,4 +153,37 @@ char ps2_key_match(char scancode)
 		}
 	}
 	return keynote;
+}
+
+
+
+//DRUMS STUFF------------------------------
+
+char drum_key_match(int x, int y)
+{
+	char key_note = 0;
+	
+	if(ISBETWEEN(xmin,x,xmax) && ISBETWEEN(ymin,y,ymax))	//check if it is in logical range of lcd
+	{
+		if(ISBETWEEN(square1_xmin, x, square1_xmax) && ISBETWEEN(square1_ymin, y, square1_ymax))
+				key_note = 40;		//Drum 1 SNARE DRUM
+		else if(ISBETWEEN(square2_xmin, x, square2_xmax) && ISBETWEEN(square2_ymin, y, square2_ymax))
+				key_note = 36;		//Drum 2 Bass drum	
+		else if(ISBETWEEN(square3_xmin, x, square3_xmax) && ISBETWEEN(square3_ymin, y, square3_ymax))
+				key_note = 48;		//drum 3 Tom Tom drum
+		else if(ISBETWEEN(square4_xmin, x, square4_xmax) && ISBETWEEN(square4_ymin, y, square4_ymax))
+				key_note = 41;		//Drum 4 Low Floor tom
+		else if(ISBETWEEN(square5_xmin, x, square5_xmax) && ISBETWEEN(square5_ymin, y, square5_ymax))
+				key_note = 51;		//Cymbal ride cymbal 1
+		else
+			key_note = 0;
+
+	}
+		else	//bound check else
+	{
+		key_note=0;
+	}//end of bound check
+
+    //tx1_send(&key_note, 1);
+	return key_note;
 }

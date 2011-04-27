@@ -43,13 +43,14 @@
 // Main Function
 void TouchScreen(void)
 {
-  Initialize_TouchScreen();                             // Initialize device
-                                     // Infinite loop
+	Initialize_TouchScreen();               // Initialize device
+	tx1_send("tswait",6);
     waitForTouch();                         // Wait for touch on screen
+	tx1_send("tsout",5);
     touched = 1;                            // Screen is touched
     while(1)
     {                                       // Loop while screen is touched
-      readXY();                            // Get X,Y coordinates index 0
+      readXY();                             // Get X,Y coordinates index 0
 
       // Take 2 values and see the difference between them.
       // If value is greater than 5 steps, discard packet.
@@ -167,9 +168,10 @@ void sendData(unsigned int xCoord, unsigned int yCoord) {
 
 
     sprintf(str_buf, "X: %d, Y:%d\n\r",xCoord, yCoord);
-    //tx1_send(str_buf,strlen(str_buf));
+    tx1_send(str_buf,strlen(str_buf));
 	
 	keyNote = piano_key_match(xCoord, yCoord);
+	//keyNote = drum_key_match(xCoord, yCoord);
 	tx1_send(&keyNote, 1);
 	RF_Send(&keyNote, 1);
 

@@ -82,34 +82,33 @@ void main(void)
     // Initalise board peripherals
     halBoardInit();
     uart_intfc_init();
-    tx1_send("Hello World\n\r", 13);
 	Init_AppRF(RF_TX);
+	TimerInterface_Initialize();
+    tx1_send("Hello World\n\r", 13);
 	
-
-    TimerInterface_Initialize();
     //DrumSet();
 	//MMC_Test();
 	//midiTest();
-	//lcdTest();
-	//TouchScreen();
-	init_kb();
-	while(1);
-	
-	{
-	  tmp_val = kb_getchar();
-	  tx1_send(&tmp_val, 1);
-	}
+	lcdTest();
+	TouchScreen();
+	//init_kb();
+//	while(1);
+//	
+//	{
+//	  tmp_val = kb_getchar();
+//	  tx1_send(&tmp_val, 1);
+//	}
 }
 
 void lcdTest() {
 
-  	halMcuWaitMs(5000);
+  	halMcuWaitMs(3000);
   	clear_screen_lcd();		//Clears LCD screen
     draw_piano();			//Draws a Piano
-    halMcuWaitMs(5000);				//Give some time for it to draw.
-    //clear_screen_lcd();		//Clear LCD screen
-    //draw_drums();			//Draw Drums now
-	//halMcuWaitMs(5000);
+//    halMcuWaitMs(1000);				//Give some time for it to draw.
+//    clear_screen_lcd();		//Clear LCD screen
+//    draw_drums();			//Draw Drums now
+//	halMcuWaitMs(1000);
 
     //while(1);
 }
